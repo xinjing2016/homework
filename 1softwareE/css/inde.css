@@ -1,0 +1,83 @@
+body{
+	background: black;
+}
+#box{
+	width: 30vw;
+	height: 30vw;
+	background: black;
+	
+	border-radius:50% ;
+	position: absolute;
+	top: 50%;
+	margin-top: -15vw;
+	left: 50%;
+	margin-left: -15vw;
+	
+}
+
+#cursor{
+	position: absolute;
+	left: 50%;
+	margin-left: -2vw;
+	top: 0;
+	width: 0;     
+	height: 0;     
+	border-left: 2vw solid transparent;     
+	border-right: 2vw solid transparent;   
+  	border-bottom: 15vw solid red;
+  	transform-origin:center bottom;
+  	-webkit-transform-origin:center bottom;
+  	transform:rotate(0deg);
+  	/*transition: all ease-in-out 2s; */
+  	
+}
+#btn{
+	position: absolute;
+	width: 5vw;
+	height: 5vw;
+	background: darkred;
+	top: 50%;
+	margin-top: -2.5vw;
+	left: 50%;
+	margin-left: -2.5vw;
+	border-radius:50% ;
+	cursor: pointer;
+}
+.win{
+	position: absolute;
+	width: 30vw;
+	height: 20vw;
+	top: 50%;
+	margin-top: -10vw;
+	display: none;
+	left: 50%;
+	margin-left: -15vw;
+	background: white;
+	border-radius:8% ;
+	overflow: hidden;
+	transition: all 1s ;
+	 
+}
+.win .head{
+	height: 3.5vw;
+	background: gray;
+}
+.win .head span{
+	float: right;
+	color: white;
+	font-size: 2rem;
+    margin-right: 1.2rem;
+    line-height: 3.5vw;
+    display: block;
+    cursor: pointer;
+}
+.win p.hi{
+	text-align: center;
+	font-size: 1.5rem;
+    margin-top: 1.8em;
+    margin-bottom: 1.1rem;
+}
+.win p.txt{
+	text-align: center;
+	font-size: 2rem;
+}

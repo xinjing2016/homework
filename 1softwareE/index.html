@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>郭新境39号抽奖项目</title>
+		<link rel="stylesheet" href="css/reset.css" />
+		<link rel="stylesheet" href="css/inde.css" />
+	</head>
+	<body>
+		
+		
+		
+	<div id='box'>
+		
+		<div id="cursor"></div>
+		<div id="btn"></div>
+	</div>	
+		
+	<div class="win" >
+		<div class="head clearfix">
+			<span>X</span>
+		</div>
+		<p class="hi">
+			恭喜您！
+		</p>
+		<p class="txt">
+			获得了<strong >1</strong>等奖！
+		</p>
+	</div>	
+		
+		
+	<script>
+		window.onload = function(){
+			var index = 0;
+			var temp = 0;
+			var oBtn = document.getElementById('btn');
+			var oCursor = document.getElementById('cursor');
+			var oWin = document.getElementsByClassName('win')[0];
+			var oClose = document.getElementsByTagName('span')[0];
+			var oNum = document.getElementsByTagName('strong')[0];
+			//alert(oWin);
+			oBtn.onclick = function(){
+				
+				index = (Math.floor(Math.random()*12));
+				temp =index*30 +1440;				
+				oCursor.style.cssText = 'transform:rotate( '+ temp +'deg);transition: all 2s 0.5s';
+				oCursor.addEventListener("webkitTransitionEnd", function(){ //动画结束时事件
+					this.style.cssText = 'transform:rotate('+ (index*30) +'deg);transition: all 0s';
+					oWin.style.cssText = 'display: block;';
+					oNum.innerHTML = (index==0?12:index);
+				}, false);
+				
+				console.log(index);
+			}
+			oClose.onclick = function(){
+				oWin.style.cssText='display:none;';
+				
+			}
+		}
+	</script>
+	</body>
+</html>

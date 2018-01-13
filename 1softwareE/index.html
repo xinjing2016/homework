@@ -11,9 +11,24 @@
 		
 		
 	<div id='box'>
-		
+		<ol class="bg">
+			<li><div class="lala">一等奖</div><em></em></li>
+			<li><div class="lala">二等奖</div><em></em></li>
+			<li><div class="lala">三等奖</div><em></em></li>
+			<li><div class="lala">四等奖</div><em></em></li>
+			<li><div class="lala">五等奖</div><em></em></li>
+			<li><div class="lala">六等奖</div><em></em></li>
+			<li><div class="lala">七等奖</div><em></em></li>
+			<li><div class="lala">八等奖</div><em></em></li>
+			<li><div class="lala">九等奖</div><em></em></li>
+			<li><div class="lala">十等奖</div><em></em></li>
+			<li><div class="lala">十一等奖</div><em></em></li>
+			<li><div class="lala">十二等奖</div><em></em></li>
+			
+		</ol>
 		<div id="cursor"></div>
-		<div id="btn"></div>
+		<div id="btn">点我抽奖</div>
+		
 	</div>	
 		
 	<div class="win" >
@@ -31,32 +46,79 @@
 		
 	<script>
 		window.onload = function(){
-			var index = 0;
-			var temp = 0;
-			var oBtn = document.getElementById('btn');
-			var oCursor = document.getElementById('cursor');
-			var oWin = document.getElementsByClassName('win')[0];
-			var oClose = document.getElementsByTagName('span')[0];
-			var oNum = document.getElementsByTagName('strong')[0];
-			//alert(oWin);
-			oBtn.onclick = function(){
+			
+			//定义转盘类
+			function Btn(btn,cursorP,win,close,num,obg){
+				this.btn = btn;
+				this.bg = oBg;
+				this.cursorP = cursorP;
+				this.win = win;
+				this.close = close;
+				this.num = num;
+				this.lastIndex = 0;
+				this.init();
+				this.cursor();
 				
-				index = (Math.floor(Math.random()*12));
-				temp =index*30 +1440;				
-				oCursor.style.cssText = 'transform:rotate( '+ temp +'deg);transition: all 2s 0.5s';
-				oCursor.addEventListener("webkitTransitionEnd", function(){ //动画结束时事件
-					this.style.cssText = 'transform:rotate('+ (index*30) +'deg);transition: all 0s';
-					oWin.style.cssText = 'display: block;';
-					oNum.innerHTML = (index==0?12:index);
-				}, false);
 				
-				console.log(index);
+			}//定义转盘的原型
+			Btn.prototype = {
+				
+				init : function(){
+					this.lastIndex = 0;//
+					var x = screen.width;
+					var y = screen.height;
+//					if(x<y){//pc
+//						
+//						//alert(oBg);
+//						oBg.style.cssText = "width: 80vw;height: 80vw;margin-top: -40vw;margin-left: -40vw;";
+//					}
+//					console.log(x);
+				},
+				cursor : function(){
+					var This = this;//指向btn的实例化对象
+					var pointer = this.cursorP;
+					
+					this.btn.onclick = function(){
+						this.lastIndex = (Math.floor(Math.random()*12));
+						var index = this.lastIndex;//这个就是要生成的最后的成绩 
+						var temp = this.lastIndex*30 +1440;				
+						This.cursorP.style.cssText = 'transform:rotate( '+ temp +'deg);transition: all 2s 0.5s';
+						This.bg.style.cssText = 'transform:rotate( '+ -temp +'deg);transition: all 2s 0.5s';
+						
+						oCursor.addEventListener("webkitTransitionEnd", function(){ //动画结束时事件
+							this.style.cssText = 'transform:rotate('+ (index*30) +'deg);transition: all 0s';
+							This.bg.style.cssText = 'transform:rotate('+ (-index*30) +'deg);transition: all 0s';
+							This.win.style.cssText = 'display: block;';
+							
+							oClose.onclick = function(){
+								oWin.style.cssText='display:none;';
+								
+							}														
+							This.num.innerHTML = (index==0?12:index);
+						}, false);					
+					}									
+				},				
+				change : function(fn){
+					obj.style.cssText = 'transform:rotate( '+ temp +'deg);transition: all 2s 0.5s';
+				}
 			}
-			oClose.onclick = function(){
-				oWin.style.cssText='display:none;';
+									
+//实例化
+ 			
+                var oBtn = document.getElementById('btn');
+				var oCursor = document.getElementById('cursor');
+				var oWin = document.getElementsByClassName('win')[0];
+				var oClose = document.getElementsByTagName('span')[0];
+				var oNum = document.getElementsByTagName('strong')[0];
+				var oBox = document.getElementById("box");
+				var oBg = oBox.getElementsByClassName("bg")[0];
 				
-			}
-		}
+                new Btn(oBtn,oCursor,oWin,oClose,oNum,oBg);
+           
+				//alert(oClose);
+
+
+		}//end of onload
 	</script>
 	</body>
 </html>

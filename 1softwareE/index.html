@@ -83,11 +83,11 @@
 						var index = this.lastIndex;//这个就是要生成的最后的成绩 
 						var temp = this.lastIndex*30 +1440;				
 						This.cursorP.style.cssText = 'transform:rotate( '+ temp +'deg);transition: all 2s 0.5s';
-						This.bg.style.cssText = 'transform:rotate( '+ -temp +'deg);transition: all 2s 0.5s';
+						This.bg.style.cssText = 'transform:rotate( 1440deg);transition: all 2s 0.5s';
 						
 						oCursor.addEventListener("webkitTransitionEnd", function(){ //动画结束时事件
 							this.style.cssText = 'transform:rotate('+ (index*30) +'deg);transition: all 0s';
-							This.bg.style.cssText = 'transform:rotate('+ (-index*30) +'deg);transition: all 0s';
+							This.bg.style.cssText = 'transform:rotate(0deg);transition: all 0s';
 							This.win.style.cssText = 'display: block;';
 							
 							oClose.onclick = function(){

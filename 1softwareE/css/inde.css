@@ -1,3 +1,28 @@
+body, html, div, blockquote, img, label, p, h1, h2, h3, h4, h5, h6, pre, ul, ol,
+li, dl, dt, dd, form, a, fieldset, input, th, td
+{margin: 0; padding: 0; border: 0; outline: none;}
+body{line-height: 1;font-size: 88% /* Decide for yourself if you want to include this. */;}
+h1, h2, h3, h4, h5, h6{font-size: 100%;padding: .6em 0;}
+ul, ol{list-style: none;}
+a{color: black;text-decoration: none;}
+a:hover
+{text-decoration: underline;}
+
+.clearfix:after {
+visibility: hidden;
+display: block;
+font-size: 0;
+content: " ";
+clear: both;
+height: 0;
+}
+.clearfix { display: inline-table; }
+/* Hides from IE-mac \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* End hide from IE-mac */
+
+
 body{
 	background: black;
 	overflow: hidden;
@@ -28,7 +53,7 @@ body{
 	transform: rotate(-30deg);
 	-webkit-transform-origin:50% 100%;
 	position: absolute;
-	-border: 1px solid white;
+	border: 1px solid rgba(255, 242, 242, 0.26);
 	left: 20vh;
 }
 .bg li:nth-child(odd) em{
@@ -40,6 +65,7 @@ body{
     border-right: 6.5vw solid transparent;
     border-top: 24vw solid #fb9898;
     opacity: 0.3;
+    
 }
 .bg li:nth-child(12){
 	transform: rotate(0deg);
@@ -126,13 +152,13 @@ body{
 }
 .win{
 	position: absolute;
-	width: 30vw;
-	height: 20vw;
+	width: 20vw;
+	height: 12vw;
 	top: 50%;
 	margin-top: -10vw;
 	display: none;
 	left: 50%;
-	margin-left: -15vw;
+	margin-left: -10vw;
 	background: white;
 	border-radius:8% ;
 	overflow: hidden;
@@ -154,11 +180,11 @@ body{
 }
 .win p.hi{
 	text-align: center;
-	font-size: 1.5rem;
-    margin-top: 1.8em;
+	font-size: 1rem;
+    margin-top: 1em;
     margin-bottom: 1.1rem;
 }
 .win p.txt{
 	text-align: center;
-	font-size: 2rem;
+	font-size: 1rem;
 }

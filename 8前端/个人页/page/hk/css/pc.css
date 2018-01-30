@@ -1,0 +1,39 @@
+@charset "utf-8";
+/******
+* CSS pc样式
+*/
+
+/*header*/
+.header{height:93px;}
+.header-logo{width:376px;height:70px;margin-top:20px;}
+.header-search{width:255px;margin-top:38px;margin-right: 50px;}
+
+/*nav*/
+.hnav{width:100%;background:#f3f2f2;}
+.hnav .bignav li{float:left;}
+.hnav .bignav li a{padding: 14px 0px;float: left;font-size: 1.5em;}
+.hnav-wrapper .subnav a{padding-left: 15px;}
+.hnav-wrapper .subnav div{padding: 8px 0px;}
+.hnav-wrapper .subnav div li span{margin-left: 41px;}
+
+
+/*banner*/
+#banner{height:455px;}
+#banner .barrow span{font-size: 31px;padding: 10px;}
+#banner a.one,#banner a.two,#banner a.three{height:455px;}
+
+/*about*/
+.about .row .aboutdes span{text-align:center;letter-spacing: 3px;}
+.about .row .aboutdes a{margin-top:50px;}
+
+
+/*product*/
+.product{height:750px;}
+
+/*adverture1*/
+.adverture1{height:425px;}
+
+/*adverture2*/
+.adverture2{height:485px;}
+
+

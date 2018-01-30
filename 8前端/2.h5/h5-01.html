@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>h5-01新增语法</title>
+  <style>
+  *{padding:0px;margin:0px;}
+  header{width:100%;height:100px;background:#009900;display:block;}
+  nav{width:100%;height:30px;background:#99ff00;display:block;}
+  section{width:70%;height:200px;background:#cc6600;float:left;display:block;}
+  aside{width:28%;height:200px;background:#cc0066;float:right;display:block;}
+  div.con{overflow:hidden;}
+  .clearfix:after{
+	content:'';
+	display:block;
+	width:100%;
+	height:0px;
+	clear:both;
+  }
+  footer{width:100%;height:400px;background:#999900;}
+  </style>
+
+ </head>
+ <body>
+	<header>头部
+		<input type="next" list="mylist"/>
+		<datalist id="mylist">
+			<option>M</option>
+			<option>g</option>
+			<option>e</option>
+			<option>d</option>
+		</datalist>
+	</header>
+	<nav>导航</nav>
+	<div class="con clearfix">
+		<section>con
+			<hgroup>
+				<h1>h1</h1>
+				<article>
+					<h2>h2</h2>
+					合格悲啊合肥冯海哦过会儿规划
+				</article>
+				<hr />
+				<article>
+					<h2>the second page</h2>
+				</article>
+			</hgroup>
+		</section>
+		<aside>ad
+			<figure>
+				<!--<img src='aa.jpg' />-->
+				<figcaption>对图片的解释</figcaption>
+			</figure>
+			<details open>
+				<summary>潭州教育</summary>
+				<p>他有想过的，想过了之后放弃了我</p>
+			</details>
+		</aside>
+	</div>
+	<footer>footer
+		<p>h5是每天晚上：<time>8：30</time>上课</p>
+		<p>元旦节是<time datetime="2016.02.14">2016.02.14</time></p>
+		<dialgo open>
+			<dt>说话的人1</dt>
+			<dd>说话的内容,很多浏览器不兼容</dd>
+			<dt>说话的人2</dt>
+			<dd>说话的内容,很多浏览器不兼容</dd>
+		</dialog>
+		<address>author me</address>
+		<p>黄色背景；<mark>mark</mark></p>
+		<progress max="100" value="0" id="pro"></progress>
+		<meter min="0" max="40" low="30" high="38" value="0" id="pri"></meter>
+		<span contextmenu="cont"></span>
+		<menu type="context" id="cont">
+			<menuitem label="右键菜单" icon="" onclick="alert('dd')"></menuitem>
+		</menu>
+	</footer>
+
+
+
+  <script>
+	document.createElement('header');
+	document.createElement('nav');
+	document.createElement('section');
+	document.createElement('aside');
+	document.createElement('footer');
+	document.createElement('article');
+	
+	var pro = document.getElementById('pro');
+	setInterval(function(){
+		pro.value +=1;
+	},1000)
+  </script>
+
+ </body>
+</html>

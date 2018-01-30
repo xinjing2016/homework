@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>轮播</title>
+  <style>
+	#back{width:100px;height:100px;background:red;}
+	#con  li{width:10px;height:10px;background:blue;margin:10px;}
+  </style>
+ </head>
+ <body>
+
+  <div id="back">
+  </div>
+  	<ul id="con">
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+
+ </body>
+</html>
+<script>
+var back=document.getElementById("back");
+var con=document.getElementById("con");
+var li=con.getElementsByTagName("li");
+	for (var i=0;i<li.length;i++ )
+	{
+		li[i].onmouseover=function(){
+			back.style.background="red";
+			this.style.background="red";
+		}
+		li[i].onmouseout=function(){
+			back.style.background="blue";
+			this.style.background="blue";
+		}
+
+		
+	}
+</script>

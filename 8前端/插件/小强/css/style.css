@@ -1,0 +1,240 @@
+@charset "utf-8";
+/**reset**/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	}
+	
+/* HTML5 display-role reset for older browsers */
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+	}
+body {
+	line-height: 1;
+	}
+ol, ul {
+	list-style: none;
+	}
+blockquote, q {
+	quotes: none;
+	}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+	}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	}
+/**body 公共区域**/
+body{
+	font-family:Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+}
+a{
+	text-decoration:none;
+}
+h1,h2,h3,h4,h5,h6{
+	font-weight:normal;
+	font-size:1em;
+}
+ul , ol {
+	list-style:none;
+}
+.clearfix:after{
+	content:"";
+	display:table;
+	clear:both;
+}
+.clearfix{
+	*zoom:1;
+}
+img{
+	width:100%;
+}
+.center{
+	margin:0 auto;
+	width:80%;
+	max-width: 1170px;
+	min-width: 1040px;
+}
+.btnStyle{
+	display: block;
+	text-align: center;
+	background: #12b7f5;
+}
+.btnStyle:hover{
+	background: #2ABFF7;
+}
+/*头部开始*/
+.top{
+	background: url(../img/tbar541.png) no-repeat center;
+	width: 100%;
+	height: 127px;
+	position:absolute;
+	color:#fff;
+	top:0;
+	left:0;
+	z-index: 999;
+}
+.top a{
+	color:#fff;
+}
+.topCenter{
+	height: 75px;
+}
+.topleft{
+	width:49%;
+}
+.topright{
+	width:40%;
+	
+}
+.topright ul a:hover{
+	color:#12B7F5;
+}
+.topCenter .topleft{
+	float: left;
+	line-height: 75px;
+}
+.topleft .logo , .topleft ul{
+	float:left;
+}
+.topleft .logo{
+	display: block;
+	background: url(../img/logo_w.png) 0 15px no-repeat;
+	width: 101px;
+	height: 75px;
+	margin-right: 25px;
+	
+}
+.topleft ul li{
+	float: left;
+	margin-right: 10px;
+}
+.topleft ul li a{
+	display: block;
+	padding: 0 20px;
+	font-size: 1.125em;
+}
+.topleft ul li.nav-first a{
+	background: #12b7f5;
+}
+.topCenter .topright{
+	float: right;
+}
+.topright .register{
+	float:left;
+	height: 40px;
+	width: 96px;
+	font-size: 1.125em;
+	line-height: 40px;
+	border-radius: 20px;
+	margin: 20px 0 0 25%;
+}
+.topright .topRight-user{
+	float: right;
+	font-size: 14px;
+}
+.topRight-user .topRight-user-info{
+	margin-top: 8px;
+}
+.topRight-user .topRight-user-info>li{
+	float:left;
+	line-height: 40px;
+	margin-left: 30px;
+}
+.topRight-user .topRight-user-info li img{
+	width:25px;
+	height:25px;
+	vertical-align: middle;
+	border-radius: 20px;
+}
+.loginInfo{
+	position: relative;
+}
+.loginInfo ul{
+	position: absolute;
+	width: 100px;
+	background: #fff;
+	color: #333;
+	text-align: center;
+	left:-75px;
+	top:45px;
+	display: none;
+}
+.loginInfo ul:before{
+	position: absolute;
+	top:-5px;
+	left: 85%;
+	content: "";
+	border-bottom: 5px solid #fff;
+	border-right: 5px solid transparent;
+	border-left: 5px solid transparent;
+}
+.loginInfo ul li:first-child{
+	border-bottom: 1px solid #d7d7d7;
+}
+.onlineveiw{
+	text-align: right;
+}
+.onlineveiw a:hover{
+	text-decoration: underline;
+	color:#12B7F5;
+}
+/*banner开始*/
+.scrollBanner{
+	width:100%;
+	min-width: 1040px;
+	position: relative;
+	height:540px;
+	overflow: hidden;
+}
+.scrollBanner ul li{
+	height: 768px;
+	
+}
+.scrollBanner ul .banner-1{
+	background: url(../img/bg541.jpg) no-repeat center;
+}
+.scrollBanner ul .banner-2{
+	background: url(../img/im_pc_banner.jpg) no-repeat center;
+}
+.scrollBanner ul li dl{
+	padding: 80px 0 0 30px;
+}
+.scrollBanner ul li dl dd a{
+	width:390px;
+	line-height: 75px;
+	color:#fff;
+	font-size: 40px;
+}
+.scrollBanner ul .banner-1 dt{
+	background: url(../img/ver541.png) no-repeat;
+	width:401px;
+	height: 320px;
+	
+}
+.scrollBanner ul .banner-2 dt{
+	background: url(../img/pc69txt.png) no-repeat;
+	width:423px;
+	height: 296px;
+	
+}

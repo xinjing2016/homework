@@ -1,0 +1,47 @@
+/*register css*/
+
+/*top*/
+.subheader{background:#049beb;}
+.subheader .subheader-wrap{width:1000px;}
+.subheader .subheader-wrap ul{float:left;}
+.subheader .subheader-wrap ul li{float:left;}
+.subheader .subheader-wrap ul li a{color:#fff;font-size:15px;display:block;padding:14px;}
+.subheader .subheader-wrap ul li:hover a{font-weight:bold;text-decoration:underline;}
+.subheader .subheader-wrap ul li.home{background:#27b2fc;}
+.subheader .subheader-wrap ul li.plant{background:#04b1cb}
+.subheader .subheader-wrap ul li.animal{background:#07c1bf}
+.subheader .subheader-wrap ul li.island{background:#02d09d}
+.subheader .subheader-wrap ul li.know{background:#01c747}
+.subheader .subheader-wrap ul li.guest{background:#9bbc04}
+
+/*wrapper*/
+.wraper {width: 950px;}
+.wraper h2 {font-size: 20px;font-weight: normal;padding: 20px 0px 20px 0px;
+		background: url(../images/login/bg/b.gif) no-repeat left center;padding-left: 30px;}
+.reg-info-box { border: solid 1px #dcdcdc;}
+.reg-info-box ul {padding: 50px 0px 0px 280px;display: inline-block;}
+.reg-info-box li {margin-bottom: 18px;}
+.reg-info-box li label {font-size: 18px;color: #444;width: 100px; line-height: 37px;float: left;text-align: right;
+}
+.reg-info-box li .reg-input {width: 276px;height: 25px;font-size: 16px;color: #717171;line-height: 25px;border: solid 1px #c1c1c1;
+    background: #fbfbfb;padding: 5px;}
+.reg-info-box li .tips-grey {padding: 5px 0 0 105px;color: #A1A0A0;}
+.onShow,.onFocus,.onError,.onCorrect,.onLoad,.onTime{display:inline-block;display:-moz-inline-stack;zoom:1;*display:inline; vertical-align:middle;background:url(../images/msg_bg.png) no-repeat;	color:#444;line-height:18px;padding:2px 10px 2px 23px; margin-left:10px;_margin-left:5px}
+.onShow{background-position:3px -147px;border-color:#40B3FF;color:#959595}
+.onFocus{background-position:3px -147px;border-color:#40B3FF;}
+.onError{background-position:3px -47px;border-color:#40B3FF; color:red}
+.onCorrect{background-position:3px -247px;border-color:#40B3FF;}
+.onLamp{background-position:3px -200px}
+.onTime{background-position:3px -1356px}
+.reg-info-box li.regbtn-box {padding: 30px 0px;}
+.reg-info-box li {margin-bottom: 18px;}
+.reg-info-box li.regbtn-box .btn-register1 {width: 180px;height: 45px;border: 1px solid #016ba3;font-family: 微软雅黑,黑体;background-color: #5dc7ff;
+color: #fff;margin-left: 100px;font-size: 20px;cursor: pointer;}
+.reg-info-box li.regbtn-box .btn-register1:hover{background-color: #24aff8;}
+
+
+
+
+
+
+

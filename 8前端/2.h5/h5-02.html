@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>h5-02ui伪类选择器</title>
+  <style>
+	:disabled{border:1px solid red;}
+	:checked + label{color:red;background:red;}
+	label{display:block;float:left;}
+	:default{outline:2px solid green;}
+	:valid{outline:2px solid red;}
+	:invalid{background:red;}
+	:in-range{color:red;}
+	:out-of-range{color:blue;}
+  </style>
+ </head>
+ <body>
+	<input type="text" disabled/>
+	<input type="radio" name="checked"/><label>1</label>
+	<input type="radio" name="checked"/><label>2</label>
+	<input type="radio" name="checked"/><label>3</label>
+	<input type="radio" name="checked"/><label>4</label>
+	
+	<br />
+	<input type="checkbox" id="chek1"/><label for="chek1">1</label>
+	<input type="checkbox" id="chek2"/><label for="chek2">2</label>
+	<input type="checkbox" id="chek3"/><label for="chek3">3</label>
+	<input type="checkbox" id="chek4"/><label for="chek4">4</label>
+
+	<br />
+	<button type="submit">点我</button>
+	<button type="reset">gegfe</button>
+
+	<br />
+	<input type="text" required/>
+	<input type="text" />
+
+	<br />
+	<input type="number" max="10" min="0" />
+
+	<br />
+ </body>
+</html>

@@ -1,0 +1,41 @@
+@charset "utf-8";
+/******
+* CSS 平板样式
+*/
+/*header*/
+body{background:white;}
+.header{height:93px;}
+.header-logo{width:376px;height:70px;margin-top:20px;}
+.header-search{width:255px;margin-top:38px;}
+
+/*nav*/
+.hnav{width:100%;background:#f3f2f2;}
+
+.hnav .bignav li a{padding: 13px 0px;float: left;font-size: 1.2em;}
+.hnav-wrapper .subnav div{padding: 10px 0px;}
+.hnav-wrapper .subnav div li span{margin-left: 15px;}
+
+
+/*banner*/
+#banner{height:300px;}
+#banner .barrow span{font-size: 10px;padding: 8px;}
+#banner a.one,#banner a.two,#banner a.three{height:300px;background-size: cover;}
+
+/*about*/
+.about .row .aboutdes{padding-left:15px;}
+.about .row .aboutdes span{text-align:left;letter-spacing: -1px;}
+
+
+/*product*/
+.product{height:600px;}
+.product .container .row div{padding:0px 10px;}
+
+
+
+/*adverture1*/
+.adverture1{height:300px;background-size: cover;}
+
+/*adverture2*/
+.adverture2{height:300px;background-size: cover;}
+
+#maincon .article h1{font-size:1.6em;}

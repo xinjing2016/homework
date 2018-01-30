@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Dom</title>
+ </head>
+ <body>
+  <div id="a" class="aa" style="width:100px;">
+	1
+	<p>1</p>
+  </div>
+ </body>
+</html>
+<script>
+var box = document.getElementById('a');
+var child = box.childNodes;
+//alert(child[2].nodeType);
+//有12种节点,不获取孙子节点，回车也是节点
+//获取元素的宽高
+alert(a.offsetWidth)//width+padding+border
+alert(a.clientWidth)//width+padding    so does height,
+alert(a.scrollHeight)//尽量不要用
+alert(getStyle(a,"width"));
+function getStyle(obj,attr){
+	return obj.currentStyle?obj.currentStyle[attr]:getComputerStyle(obj)[attr]
+}
+</script>

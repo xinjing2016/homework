@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>拖拽</title>
+  <style>
+  .test{width:5px;height:5px;position:fixed;background:blue;}
+  </style>
+ </head>
+ <body>
+  
+ </body>
+</html>
+
+<script>
+document.onmousedown = function(){
+
+	this.onmousemove = function(ev){
+
+		ev=ev||window.event;//
+
+		var x = ev.clientX;
+		var y = ev.clientY;
+
+		this.body.innerHTML +='<div  class="test" style="left:'+x+'px;top:'+y+'px"></div>';	
+	}
+	this.onmouseup=function(){this.onmousemove = null;}
+}
+</script>

@@ -1,0 +1,9 @@
+@charset "utf-8";
+/******
+* CSS 电脑样式
+*/ 
+/*导航*/
+.head_nav{top:100px; left:100px;}
+.head_nav a.logo{width:120px; height:120px;  margin:8px 0px;}
+.head_nav ul li.title{font-size:22px;font-weight:700; }
+.head_nav ul li{line-height:50px; width:120px; }

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>留言板</title>
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<script type="text/javascript" src="js/jquery-1.7.2.js" ></script>
+		<script type="text/javascript" src="js/bootstrap.js" ></script>
+		<script type="text/javascript" src="js/vue.js" ></script>
+	</head>
+	<body>
+		<div class="container">
+			<form role="form">
+				<div class="form-group">
+					<label for="username">用户名：</label>
+					<input id="username" type="text" class="form-control" placeholder="用户名" />
+				</div>
+				<div class="form-group">
+					<label for="text">年龄：</label>
+					<input id="text" type="text" class="form-control" placeholder="age" />
+				</div>
+				<div class="form-group">
+					<input class="btn btn-primary" type="button" value="添加"/>
+					<input type="button" class="btn btn-danger" value="重置" />
+				</div>
+			</form>
+			<hr />
+			<table class="table table-bordered table-hover">
+				<caption class="h2 text-info">信息</caption>
+				<tr>
+					<th class="text-center">序号</th>
+					<th class="text-center">名字</th>
+					<th class="text-center">年龄</th>
+					<th class="text-center">操作</th>
+				</tr>
+				<tr>
+					<td class="text-center">1</td>
+					<td class="text-center">bleu</td>
+					<td class="text-center">18</td>
+					<td class="text-center"><button class="btn btn-info btn-sm" data-toggle="modal" data-target="layer">del</button></td>
+				</tr>
+				<tr >
+					<td colspan="4" class="text-center">删除全部</td>
+				</tr>
+				<tr >
+					<td colspan="4" class="text-center">暂无数据</td>
+				</tr>
+			</table>
+			
+			<div role="dialog" class="modal" id="layer">
+				
+			</div>
+		</div>
+	</body>
+</html>

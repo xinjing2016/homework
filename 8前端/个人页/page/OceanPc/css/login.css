@@ -1,0 +1,35 @@
+/*login css*/
+.regester-containter{width:100%;background:url('../images/login/bg/bg.jpg') no-repeat center;height:1080px;background-size:cover;}
+.regester-containter .containter-warpper{width:1000px;}
+.containter-warpper  .header-ret a{color:#fff;font-size:18px;}
+.containter-warpper  .header-ret a:hover{text-decoration:underline;}
+
+.containter-warpper .wrapper-body {margin-top:138px;}
+.containter-warpper .body-login{right:340px;}
+.containter-warpper  .login-bg{width:258px;height:173px;background:url('../images/login/bg/bg_06.png') no-repeat center;top: -112px;left: 40px;}
+.containter-warpper .con-header{width:336px;height:39px;background:url('../images/login/bg/headerbg_06.png');}
+.containter-warpper .con-body{width:336px;height:300px;background:#c0f9fe;border-radius:0px 0px 50px 50px;}
+.containter-warpper .con-body p{color:#6187f7;font-size:18px;}
+.con-body .body-containter{padding:0px 30px 30px;}
+.con-body .body-containter span{display:block;width:47px;height:47px;background:#82c7fc;float:left;}
+.con-body .body-containter em{display:block;width:30px;height:26px;background:url('../images/login/bg/bg_12.png') no-repeat;margin:10px auto; }
+.con-body .body-containter input{border:none;height:47px;width:200px;outline:none;font-size:18px;padding-left:5px;line-height:47px;}
+.body-userName,.body-password{background:white;}
+.body-userName .userName-cancel{width:20px;height:20px;background:url('../images/login/bg/bg_12.png')-90px -2px; margin-top: 12px;}
+.con-body .body-containter .body-password  em{background-position:-31px 0px;}
+.containter-warpper input.body-submit{background:#abd9fc;font-size:23px;color:white;text-align:center;line-height:47px;width:270px;}
+.containter-warpper input.body-submit:hover{background:#82c7fc;}
+.containter-warpper .body-more .qqLogin em{display:inline-block;width:30px;height:30px;background-position: -59px 0px; float: left;}
+.containter-warpper .body-more .qqLogin  a{font-size: 14px;color: #999; float: left;margin-left: 5px;margin-top: 13px;}
+.containter-warpper .body-more .qqLogin  a:hover{color:black;}
+.containter-warpper .body-more .forgetPassword{color:#f69;font-size:16px;}
+
+
+.regester-containter .footer{bottom:0px;color:white;}
+div.footer p a{color:white;}
+
+
+
+
+
+

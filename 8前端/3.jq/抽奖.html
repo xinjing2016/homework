@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>抽奖</title>
+  <script src="js/jquery-1.11.1.js"></script>
+  <style>
+  
+  ul,li{list-style:none;}
+  ul{width:300px;}
+  li{float:left;width:100px;height:100px;background:pink;line-height:100px;text-align:center;}
+  .active{background:red;color:white;}
+  </style>
+ </head>
+ <body>
+  <input value="顺序" type="button"/>
+  <input value="随机" type="button"/>
+ 
+ <ul>
+	<li class="active">1</li>
+	<li>2</li>
+	<li>3</li>
+	<li>4</li>
+	<li>5</li>
+	<li>6</li>
+	<li>7</li>
+	<li>8</li>
+	<li>9</li>
+ </ul>
+ <script>
+ $(function(){
+	 var iNow = 0;
+	 var $li = $('li');
+	 var  timer = null;
+	 var pin = 0;
+
+	$('input').eq(0).click(function(){
+		var step = Math.floor(Math.random()*9+10);
+
+		clearInterval(timer);
+		timer = setInterval(function(){
+			if (iNow > 8)
+			{
+				iNow = 0;
+			}
+			$li.eq(iNow).addClass('active').siblings().removeClass('active');	
+			pin=iNow;
+			step--;
+			if (step<=0)
+			{
+				clearInterval(timer);
+				console.log(++pin);
+			}
+			iNow++;
+		},300);
+	});
+
+	$('input').eq(1).click(function(){
+		var step = Math.floor(Math.random()*9+20);
+		clearInterval(timer);
+
+		timer = setInterval(function(){
+			var step1 = Math.floor(Math.random()*10);
+			pin=step1;
+			$li.eq(step1).addClass('active').siblings().removeClass('active');
+			step--;
+			if (step<=0)
+			{
+				clearInterval(timer);
+				console.log(++pin);
+			}
+		},300);
+	});
+ })
+ </script>
+ </body>
+</html>

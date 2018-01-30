@@ -1,0 +1,133 @@
+/*common*/
+
+/**** header ****/
+.header{box-shadow:0 0 1px #000 inset;-moz-box-shadow:0 0 1px #000 inset;-webkit-box-shadow:0 0 1px #000 inset;background: white;width:100%;}
+.header-wrapper{height:55px;width:1000px;}
+.h-time{font-size:16px;color:#dd949b;}
+.h-time span{line-height:55px;}
+.h-search{border:2px solid #8d5da4;width:345px;height:35px;margin:10px 0px 0px 116px;border-radius: 20px;}
+div.header div.h-search input[type="text"]{outline:none;border:none;height:25px;margin:5px 0px 0px 20px;
+		width:270px;font-size:20px;color:#8d5da4;border-right: 1px solid;line-height: 25px;}
+div.header div.h-search input[type="text"]:focus{border:1px solid #eee}
+div.header div.h-search input[type="submit"]{width:30px;height:30px;float:right;margin: 4px 13px 0px 6px;
+		background:url("../images/bg/css-public.png") no-repeat -75px -85px;border:none;outline:none;}
+div.header div.h-login a{font-size:18px;color:#dd949b;line-height:55px;}
+div.header div.h-login a:hover{color:#8d5da4;}
+
+
+/**** nav ****/
+div.nav{width:100%;height:123px;background:url("../images/plant/bg/bg_01.jpg")no-repeat center;min-width:1000px;}
+div.nav-wrapper{width:1000px;height:116px}
+div.big-logo a{display:block;width:296px;    height: 116px;}
+div.bigNav{  width: 1000px;}
+div.big-nav{height: 116px;}
+div.big-nav ul li{float:left; width: 90px;height: 90px;margin:23px 0px 23px 19px;position:relative;}
+div.big-nav ul li a{position:absolute;width:100%;height:100%;}
+div.big-nav ul li a span{display:block;width:61px;height:32px;background:url("../images/island/bg/islandsp.png") no-repeat;
+margin:34px 0px 0px 14px;}
+.nav-wrapper ul li.plant a span{background-position:4px -33px;}
+.nav-wrapper ul li.animal a span{background-position:-56px -33px;}
+.nav-wrapper ul li.island a span{background-position:-117px -33px;}
+.nav-wrapper ul li.konws a span{background-position:-180px -33px;}
+.nav-wrapper ul li.about a span{background-position:-236px -33px; width: 86px;margin-left: 6px}
+.nav-wrapper ul li a:hover span{
+transform:rotate(10deg);
+-ms-transform:rotate(10deg); 	/* IE 9 */
+-moz-transform:rotate(10deg); 	/* Firefox */
+-webkit-transform:rotate(10deg); /* Safari 和 Chrome */
+-o-transform:rotate(10deg); }
+
+div.secondNav-wrapper{width:1000px;}
+div.secondNav-wrapper a{height:80px;float:left;} 
+div.secondNav-wrapper a span{display:block;width:80px;height:35px;margin:21px auto;}
+.secondNav-wrapper a:hover span{transform:rotate(10deg);
+-ms-transform:rotate(10deg); 	/* IE 9 */
+-moz-transform:rotate(10deg); 	/* Firefox */
+-webkit-transform:rotate(10deg); /* Safari 和 Chrome */
+-o-transform:rotate(10deg);}
+
+
+
+/**** iContent ****/
+.iConcent-Wrapper .con-header{width:450px;height:110px;margin:0 auto;}
+.iConcent-Wrapper .con-header-bg{font-size:110px;color:white;line-height: 87px;z-index:1;}
+.iConcent-Wrapper .con-header-title{text-indent: -1000px;display: block;width: 170px;height: 60px;margin: 0 auto;}
+.iConcent-Wrapper .con-header-des{text-align: center;font-size: 25px;color: #fff;border-top: 2px solid #fff; width: 260px;margin: 0 auto;margin-top: 5px;line-height: 42px;}
+
+.scene-header{width:100%;height:65px;border-bottom:1px solid #fff;}
+.scene-logo{width:105px;height:65px;}
+.scence-title{font-family:fontfzyijt;font-size:30px;color:white;margin-top: 30px;margin-left: 15px;}
+
+div.list-big{border:1px solid green;height: 129px;overflow: hidden;}
+div.list-big a, div.ul-list ul li a,div.content-left a,.content-list a{ position: absolute; width: 100%;height: 100%;top: 0px;left: 0px;}
+div.big-text{background: rgba(0,0,0,0.5);width: 284px;color: white;font-size: 17px;height: 27px;
+	text-indent: 1em;bottom: -27px;line-height: 27px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+.dot{width: 8px;height: 8px;float: left;background: green;border-radius: 4px;margin: 8px 5px 0px 8px;}
+div.ul-list{margin:15px 0px 0px 10px;}
+div.ul-list ul{margin-top:15px;}
+div.ul-list ul li{font-size: 21px;margin-bottom: 10px;position:relative;overflow: hidden;color:white;
+	text-overflow: ellipsis;white-space: nowrap;width: 13em;border-bottom:1px dashed #ddd;}
+div.ul-list ul li span{position: absolute;right: 0px;display:none;}
+.con-new-body a{position:absolute;top:0px;left:0px;width: 100%;height: 100%;}
+.new-body-l-title{font-size:18px;color:#5d5e5d;}
+.new-body-l-des{width:350px;text-indent:2em;}
+.con-new-body-r{width: 530px;}
+.con-new-body-r li{float:left;position:relative;margin:0px 0px 12px 15px;overflow: hidden;}
+.iContent .new-body-r-bg{border:1px solid #000;width:245px;height:110px;border-radius:5px;}
+.iContent .new-body-r-img{border:1px solid #000;z-index:2;position: absolute;;left: -3px;top:-3px;border-radius:5px;}
+.iContent .new-body-r-text{z-index:3;left: -3px;border-radius:5px;background: rgba(4, 142, 84, 0.9);width: 100%;height: 100%;top: -126px}
+.new-body-r-text h4 {color: #fff;font-size: 18px;margin: 14px 10px 3px;}
+.new-body-r-text p {color: #fff; font-size: 13px; margin: 14px 10px 3px;}
+
+.con-next{width:60px;height:60px;background:#fff;margin-top:205px;border-radius:50px;}
+.con-next .con-next-bg{width:60px;height:60px;border-radius:50px;background:url('../images/island/bg/islandsp.png') no-repeat -415px 27px;cursor:pointer;}
+
+
+/************************************  footer  ************************************/
+.footer{height:100px;  width: 100%;}
+.footer .tooter-text{z-index:2;width: 100%;margin-top:20px;}
+.footer p{text-align: center;}
+.footer p a{color:#000;}
+.footer p a:hover{text-decoration:underline;}
+
+div.top{width:63px;height:118px;background:url("../images/bg/css-public.png") no-repeat -2px -86px;position:fixed;right:5%;bottom: 20px;z-index:666;display:none;}
+
+/************************************  common  ************************************/
+.commonEdit{width:675px;height:182px;background:#fbfbfb;border:1px solid #7ecef4;border-radius:10px;}
+.editSub{width:675px;height:40px;border-top:1px solid #7ecef4;background:#eef9ff;border-radius:0px 0px 10px 10px;margin-top:10px;}
+
+.commonContent .com-username{width:195px;height:30px;}
+.commonContent .editCon {width: 659px;height: 123px;overflow: overlay;margin: 0 auto;outline: none;font-size: 16px;color: black; margin-top: 7px;}
+.commonContent .com-userface{border-radius:8px;border: 1px solid #ddd;width: 30px;height: 29px;margin: 5px 19px;}
+.commonContent input.com-username {height:30px;font-size:16px;margin: 4px 0px 0px 0px;    font-size: 16px;line-height: 30px;padding-left: 7px;}
+.commonContent .but{width:118px;height:40px;margin:6px 12px 0px;position:relative;}
+.commonContent .but span.msg_but{font-size:12px;width:80px; height:30px;display:inline-block;background:#7db718;color:#fff; cursor:pointer;line-height:30px; text-align:center; border-radius:3px;float:right;}
+.commonContent .but span.msg_but:hover{background:#699f00}			
+.commonContent .but .face{width:395px;height:165px; background:#fff;border:1px solid #ddd; position:absolute;top:20px; left:-400px; padding:10px; display:none;}
+.commonContent .but .face ul li{width:22px;height:22px;list-style-type:none;float:left;margin:2px;cursor:pointer;}
+.commonContent .listwrap{width: 670px;}
+.commonContent .listwrap-title{border-bottom:1px solid #ddd;font-size:17px;font-weight:bold;color:#049beb;}
+.commonContent .masInfo{padding: 10px 0px 10px 5px;border-bottom: 1px solid #ddd;}
+.commonContent .list-face {margin-right: 10px;}
+.info-username{font-size:19px;color:#049beb;margin-right: 10px;}
+.info-time{color:#bbb7b7;font-size:12px;}
+.list-text{width:615px;}
+
+.list-more{width:100%;height:40px;background:#ceedfd;cursor:pointer;font-size:15px;text-align:center;color:#0095e4;line-height:40px;}
+.recommend .recommend-lists{width: 306px;}
+.recommend .hot-title{border-bottom:1px solid #ddd;}
+.recommend .hot-title h2{display:block;width:70px;height:30px;color:white;background:#00ccff;font-weight:normal;text-align:center;line-height:30px;float:left;}
+.recommend .hot-title  em{display:block;width:230px;height:5px;background:#e6e6e6;float:right;margin-top:12px;}
+.recommend .recommend-lists li{list-style: initial; margin-left: 24px;}
+.recommend .recommend-lists a{color:#5D5E5D;}
+.recommend .recommend-lists a:hover,.recommend-new .new-title a:hover{text-decoration:underline;}
+.recommend .new-title{border-bottom:1px solid #ddd;border-top:2px solid #8bbc2b;padding: 8px;}
+.recommend .new-title em{width:4px;height:23px;background:#8bbc2b;float:left;}
+.recommend .new-title h2{font-size:17px;float:left;margin-left: 8px;font-weight:normal;}
+.recommend .new-title a{float:right;color:#ddd;font-size:14px;}
+.recommend .new-title a:hover{text-decoration:underline;color:black;}
+
+
+
+
+

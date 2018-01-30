@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>选项卡</title>
+
+  <style>
+	ol,ul , li{list-style:none;overflow:hidden;margin:0;padding:0;}
+	.tab li{width:80px;height:50px;float:left;border:1px solid blue;}
+	.pic li{width:300px;height:200px;border:1px solid blue;}
+	ol{width:302px;height:202px;}
+	.show{background:blue;}
+	.hide{background:none;}
+  </style>
+ </head>
+ <body>
+  
+<ul class="tab">
+	<li class="show">1</li>
+	<li>2</li>
+	<li>3</li>
+</ul>
+
+<ol class="pic">
+	<li>1</li>
+	<li>2</li>
+	<li>3</li>
+</ol>
+
+
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" >
+$(function(){
+var $tab = $(".tab li");
+var $pic = $(".pic li");
+
+
+$tab.mouseover(function(){
+	var index = $(this).index();
+	$tab.eq(index).addClass("show").siblings().removeClass();
+	//alert(index);
+	$pic.eq(index).fadeIn(1000).siblings().fadeOut(1000);
+})
+
+//$tab.mouseout(function(){
+	//var index = $tab.index();
+	//$(this).eq(index).removeClass().addClass("hide");
+
+//})
+
+
+})
+</script>
+
+
+ </body>
+</html>

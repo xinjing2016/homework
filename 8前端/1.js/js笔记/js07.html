@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>josn</title>
+ </head>
+ <body>
+  <div id="aa" style="width:100px;height:100px;background:red"></div>
+ </body>
+</html>
+<script>
+var josn={
+	name:"xinjing",
+	age:20,
+	f:function(){alert(2);},
+	arr:[1,5,5]
+};
+//josn.f();
+//for in to search the arritube in josn.key and val 
+/*for (var i in josn )
+{
+	document.write( josn[i] + '<br>');
+
+}*/
+
+/*for (var i in josn.arr )
+{
+	document.write(josn.arr[i]);
+}*/
+
+
+//获取样式
+var box = document.getElementById('aa');
+//alert(1);if obj's display is none,getConpputedStyle return the last style.cant ie 678
+//alert( getComputedStyle(box).height);
+//current 不兼容火狐和谷歌
+//alert( box.currentStyle.width)
+alert(getStyle(box,'width'));
+
+function getStyle(obj,attr){
+	
+	return obj.currentStyle?obj.currentStyle[attr]:getComputedStyle(obj)[attr]};
+//不能获取复合样式，不同浏览器返回不同的颜色值，没有设定的样式不要直接获取，因为不同浏览器返回的不一样。
+}
+
+
+setInterval(function(){alert(1);},10000);
+function fn(){alert(1);}
+setInterval(fn,10000);//fn函数名 'fn(a)'
+setInterval(fn(),10000);//会马上执行fn，然后下次执行fn返回的参数
+setInterval('fn()',10000);//equal fn
+setInterval(function(){
+	fn(1);
+}
+,10000);
+
+var timer = setInterval();
+clearInterval(timer);//可以自己清除自己
+
+//setInterval and setTimeout只执行一次。延迟器
+</script>

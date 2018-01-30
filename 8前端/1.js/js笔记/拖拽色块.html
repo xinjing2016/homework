@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>sekuai tuohzhuai</title>
+  <style>
+	#box{width:100px;height:100px;background:red;position:absolute;}
+  </style>
+ </head>
+ <body>
+  <div id="box"></div>
+ </body>
+</html>
+<script>
+
+var box = document.getElementById('box');
+
+box.onmousedown=darg;
+
+function darg (ev){
+
+	var This = this;
+	This.style.cursor="move";
+	ev = ev||window.event;
+	var x = ev.pageX;
+	var y = ev.pageY;
+	var leftStart = this.offsetLeft;
+	var topStart = this.offsetTop;
+
+	document.onmousemove=function(ev){
+		var x_ = ev.pageX;
+		var y_ = ev.pageY;	
+		var xn = x_-x;
+		var yn = y_-y;
+		box.style.left = leftStart + xn +'px';
+		box.style.top = topStart + yn +'px';
+	}
+	this.onmouseup = function(){
+		document.onmousemove = null;
+		This.style.cursor="default";
+	}
+}
+</script>

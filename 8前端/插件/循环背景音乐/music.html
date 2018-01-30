@@ -1,0 +1,70 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<meta  nane="keywords" content="" />
+<meta name="description" content="" />
+<style>
+	*{margin:0;padding:0;}
+	body{background:url(bg.jpg) no-repeat;background-size:100%;width:100%;}
+	.box{width:96%;height:900px;border:1px solid green;margin:0 auto;}
+	.box .header{height:150px;}
+	.box .header .music{height:40px;padding:2px 0;}
+	.box .header .music .anniu{margin-left:900px;}
+	.box .header .music .anniu span{background:url(bfq.png) -68px -15px;display:block;height:14px;width:14px;float:left;margin-left:5px;}
+</style>
+</head>
+
+<body>
+	<div class="box">
+    	<header class="header">
+        	<div class="music">
+            	<audio id="bjmusic">
+                	<source src="1.mp3" type="audio/mp3">
+                </audio>
+                <div class="anniu">
+                    <span id="s1"></span>
+                </div>
+            </div>
+        </header>
+    </div>
+</body>
+</html>
+<script>
+	var bjmusic=document.getElementById("bjmusic");
+	var s1=document.getElementById("s1");
+	var ddd=document.getElementById("ddd");
+	
+	xunhuan();
+	
+	s1.onoff=false;
+	s1.onclick=function()
+	{
+		if(this.onoff==true)
+		{
+			s1.style.backgroundPosition="-68px -15px";
+			bofang();
+			this.onoff=false;
+		}else
+		{
+			s1.style.backgroundPosition="-18px -15px";
+			zanting();
+			this.onoff=true;
+		};
+	};
+	function xunhuan()
+	{ 
+		bjmusic.loop=true;
+		bjmusic.load();
+		bjmusic.play();
+	};
+	function bofang()
+	{
+		bjmusic.play();
+	};
+	function zanting()
+	{
+		bjmusic.pause();
+	};
+</script>

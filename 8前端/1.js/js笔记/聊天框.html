@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>聊天</title>
+  <style>
+  
+
+  #win{width:500px;height:500px;border:1px solid #f00; word-break:break-all;overflow:auto;white-space:nomal;padding:10px;}
+  #txt{border:none;}
+  span{font-size:14px;color:#f00;}
+  </style>
+ </head>
+ <body>
+
+<div id="win"></div>
+<input id="txt" type="text" />
+<input id="btn" type="button" value="sent" />
+
+  
+ </body>
+</html>
+
+<script>
+window.onload=function(){
+
+
+var odiv=document.getElementById("win");
+var otxt=document.getElementById("txt");
+var obtn=document.getElementById("btn");
+
+obtn.onclick=function(){
+
+if(otxt.value!="")
+{
+odiv.innerHTML+="<span>新境</span>"+"<p>"+otxt.value+"</p>";
+otxt.value="";}
+else{alert("你发送的信息为空");}
+
+odiv.scrollTop=odiv.scrollHeight;
+}
+
+
+
+
+
+//alert("jg");
+
+
+}
+
+</script>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>3D banner</title>
+  <style>
+    *{margin:0;padding:0;}
+    html{background:#000;}
+    .wrapper{
+      position:fixed;
+      left:35%;top:30%;
+    }
+    .w1{perspective:1000px;perspective-origin:50% -50%;}
+    .showBox{
+      width:200px;
+      height:200px;
+      line-height:200px;
+      transform-style: preserve-3d;
+      transform:rotateY(0deg);
+    }
+    .showBox div img{margin-top:40px;width:200px;height:120px;position:absolute;}
+    /*.showBox div:nth-child(1){transform:rotateY(360deg) translateZ(350px);}
+    .showBox div:nth-child(2){transform:rotateY(36deg) translateZ(350px);}
+    .showBox div:nth-child(3){transform:rotateY(72deg) translateZ(350px);}
+    .showBox div:nth-child(4){transform:rotateY(108deg) translateZ(350px);}
+    .showBox div:nth-child(5){transform:rotateY(144deg) translateZ(350px);}
+    .showBox div:nth-child(6){transform:rotateY(180deg) translateZ(350px);}
+    .showBox div:nth-child(7){transform:rotateY(216deg) translateZ(350px);}
+    .showBox div:nth-child(8){transform:rotateY(252deg) translateZ(350px);}
+    .showBox div:nth-child(9){transform:rotateY(288deg) translateZ(350px);}
+    .showBox div:nth-child(10){transform:rotateY(324deg) translateZ(350px);}
+*/
+  </style>
+</head>
+<body>
+  <!--
+	作者：120231208@qq.com
+	时间：2015-07-26
+	描述：3D轮播图
+	-->
+  <div class="wrapper w1">
+  	<!--舞台元素-->
+    <div class="showBox">
+      <div><img src="http://i3.tietuku.com/66cb3e2b5d887f2f.jpg"></div>
+      <div><img src="http://i3.tietuku.com/137c8e479e101d7d.jpg"></div>
+      <div><img src="http://i3.tietuku.com/4207ab5cc3168724.jpg"></div>
+      <div><img src="http://i3.tietuku.com/e9fabe750a2fd48c.jpg"></div>
+      <div><img src="http://i3.tietuku.com/cacd0b6a726a18fa.jpg"></div>
+      <div><img src="http://i3.tietuku.com/e69861875db438dd.jpg"></div>
+      <div><img src="http://i3.tietuku.com/7512b9925a206bfc.jpg"></div>
+      <div><img src="http://i3.tietuku.com/37193b9a7e0ee374.jpg"></div>
+      <div><img src="http://i3.tietuku.com/56ae6d7732d5cf78.jpg"></div>
+      <div><img src="http://i3.tietuku.com/d82f0dc39eb3f12c.jpg"></div>
+    </div>
+  </div>
+</body>
+  <script src="js/jquery-2.1.3.min.js"></script>
+  <script>
+	$(function(){
+		var r = 200 / Math.tan(36 / 180 * Math.PI);
+	 	var de = 360/$(".showBox div").size();
+		var num=0;
+		for(var i=0;i<$(".showBox div").length;i++){
+			$(".showBox div").eq(i).css({transform:"rotateY("+i*de+"deg) translateZ(350px)"});
+		}
+		$(document).click(function(){
+		//转动的角度
+	      num-=de;
+			$(".showBox").stop().animate(
+				{
+					mynum:num
+				},
+				{	//持续时间
+	        duration:1000,
+					step:function(mynum){
+					$(".showBox").css('-webkit-transform','rotateY('+mynum+'deg)');
+				}
+			});
+		});
+    })
+  </script>
+</html>

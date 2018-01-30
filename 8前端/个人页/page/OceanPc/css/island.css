@@ -1,0 +1,56 @@
+/*island*/
+
+@font-face
+{
+font-family:"fontfzyijt";
+src: url('../font/fontfzyijt.ttf')
+}
+.header{    margin-top: 5px;}
+.nav{margin-top: 55px}
+
+/**** nav ****/
+.iNav{background:url("../images/plant/bg/bg_02_03.jpg")no-repeat center;height:100px;width:100%;    margin-top: 178px;}
+.nav ul li.island a span{background-position:-117px 0px;}
+.nav ul li.plant a:hover span{background-position:4px 0px;}
+.nav ul li.animal a:hover span{background-position:-56px 0px;}
+.nav ul li.konws a:hover span{background-position:-180px 0px;}
+.nav ul li.about a:hover span{background-position: -236px 0px;}
+
+
+.secondNav-wrapper a{width: 111px;margin-right: 85px;}
+.secondNav-wrapper a span{background:url("../images/island/bg/islandsp.png") no-repeat;}
+.secondNav-wrapper a.iNav-dh span{background-position:0px -70px;}
+.secondNav-wrapper a.iNav-tc span{background-position:-83px -70px;}
+.secondNav-wrapper a.iNav-nz span{background-position:-166px -70px;}
+.secondNav-wrapper a.iNav-ns span{background-position:-249px -70px;}
+.secondNav-wrapper a.iNav-np span{background-position:-334px -70px;}
+
+
+/**** banner ****/
+.iBanner{background:url("../images/island/bg/bg_04.jpg")no-repeat center;height:226px;width:100%;min-width:1000px;    margin-top: 278px;}
+
+
+
+/**** iContent ****/
+.iContent{width:100%;height:1080px;min-width:1000px;    position: relative;top: 490px;}
+.iConcent-Wrapper{width:900px;}
+.i-donghai-con{margin-top:-15px;}
+.i-donghai-con-bg1{background:url("../images/island/bg/bg_05_00.png")no-repeat center;height:16px;}
+.i-donghai-con-bg2{background:url("../images/island/bg/bg_05_01.jpg")no-repeat center;height:1064px;}
+.i-techeng-con{background:url("../images/island/bg/bg_06.jpg")no-repeat center;}
+.i-naozhou-con{background:url("../images/island/bg/bg_07.jpg")no-repeat center;}
+.i-nansan-con{background:url("../images/island/bg/bg_08.jpg")no-repeat center;}
+.i-nanping-con{background:url("../images/island/bg/bg_09.jpg")no-repeat center;}
+
+.iConcent-Wrapper .con-header-title{background:url("../images/island/bg/island-subtitle_01.png") no-repeat  -3px -58px;}
+.scene-logo{background:url("../images/island/bg/islandsp.png") -324px 3px;}   
+.i-donghai-con div.ul-list ul li{color:white;}  
+
+.i-techeng-con .con-header-title{background-position:-3px -113px;}
+.i-naozhou-con .con-header-title{background-position:-3px -174px;}
+.i-nansan-con .con-header-title{background-position:-3px -233px;}
+.i-nanping-con .con-header-title{background-position:-3px 0px;}
+.i-nanping-con .new-body-l-title,.i-nanping-con .new-body-l-des{color:white}
+
+/**** footer ****/
+.footer{background:#afe66f;font-size:12px;top: 490px;}

@@ -1,0 +1,46 @@
+/*page detail style*/
+.detailCon .conTltle{background-position: 0px -175px;line-height: 145px;font-size: 13px;text-align:right;}
+.detailCon .conTltle a{color:green;}
+.detailCon .detail{width: 720px;text-align: center;padding: 15px 0px;}
+.detailCon .detail .listDetail .listbg{margin:0px 9px;}
+.detailCon .detail .listDetail{ border: 1px dashed #d2d2d2;margin-top: 15px;color:#666;margin: 15px 0px;}
+.detailCon .detail p{font-size:16px;text-indent:2em;line-height:34px;text-align:left;}
+
+.bigCon  .rCalanda{width:228px;height:294px;background:url(../images/bg_09.jpg) no-repeat;border: 1px solid #ddd;margin-top:10px}
+.bigCon .rNews{border: 1px solid #ddd;width:228px;margin-top:10px;padding-bottom: 10px;}
+.bigCon .rNews .rNewsTltle{text-align:center;font-size:19px;font-weight:bold;color:#2aa001;margin:5px 0px;}
+.bigCon .rNewsTltle span,.bigCon .rNewsTltle em{display:block;width:50px;height:5px;background:#ddd;float:left;margin-top: 10px;padding: 0px 7px;}
+.bigCon .rNewsTltle em{float:right;}
+.bigCon .rNews ul li{border-bottom: 1px dashed #aaa;list-style: decimal inside;margin: 0px auto;width: 200px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+.bigCon .rNews ul li a{color: #0d5103;}
+
+
+
+/*page works*/
+.navActive{background:#E2FDE2;}
+.listRight .rNav{height:200px;}
+.listRight .rNav .rNavSearch {border: 1px solid #ccc;padding: 0px 8px;margin: 10px 0px;}
+.listRight .rNav .rNavSearch input[type="text"] {border: none;outline: none;width: 160px;height: 20px;line-height: 20px;font-size: 15px;}
+.listRight .rNav .rNavSearch input[type="submit"] {background: none;border: 1px solid #ccc;padding: 3px 12px;border-radius: 6px;float: right;margin-right: -8px;}
+.listRight .rNav .navWrap{width:230px;position:fixed;background: white;  border: 1px dashed green;padding: 10px 0px 0px;}
+.listRight .rNav .navWrap h2{font-size:17px;font-weight:normal;text-align:center;}
+.listRight .rNav .navWrap div{width:100px;float:left;text-align: center;border: 1px solid #ddd;padding:4px;font-size: 14px;margin: 3px 2px;}
+.listRight .rNav .navWrap div a{display:block;color:black;}
+.listRight .rNav .navWrap div.Work{width:215px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

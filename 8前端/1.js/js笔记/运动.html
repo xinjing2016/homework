@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <style>
+  #div1{width:100px;height:100px;background:red;
+		position:absolute;}
+  </style>
+ </head>
+ <body><input value="go" type="button" id="btn" />
+  <div id="div1"></div>
+  
+ </body>
+</html>
+<script>
+   var div1 = document.getElementById("div1");
+   var btn = document.getElementById("btn");//
+   var timer =null;
+   function go()
+	{
+     if(div1.offsetLeft==300)
+		{
+			clearInterval(timer);
+		}
+	   div1.style.left=div1.offsetLeft+5+"px";
+	}
+
+     timer=setInterval(go,30);
+
+
+ 
+</script>

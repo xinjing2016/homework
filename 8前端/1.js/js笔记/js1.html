@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>js01操作属性</title>
+<style>
+.on{background:green;border:10px solid;float:right;}
+</style>
+ </head>
+ <body>
+  
+
+  <div id="btn" style="width:100px;height:100px;background:red" aa="di" class="de"></div>
+ </body>
+</html>
+
+<script>
+//可以执行事件
+//操作元素
+//btn.id 自定义 属性不能获取，对象可以 但是自定义不可以
+
+var obtn = document.getElementById("btn");
+//alert(btn.getAttribute("id"));//标签里的属性都可以获取
+
+//alert(btn.className);//获取class 用className
+
+obtn.onclick=function(){
+	this.innerHTML='<b>666</b>666';//解析标签
+	this.innerText+="<b>";
+	//this.style.background="green";
+	//this.style.fontSize="20px";
+
+	//this.style.cssText +='background:green;border:20px solid red';
+	//中间不能有空格和回车.会覆盖原来的style，background会丢失
+
+	this.className="on";
+
+	//this.style.styleFloat="left";
+	//this.style.cssFloat ="left";
+
+}
+
+var a="width";
+obtn.style[a]="200px"//[string]    []=====.aa用于传参
+
+
+
+</script>

@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+	 <head>
+			<meta charset="UTF-8"> <!--声明编码 UTF-8(国际编码)-->
+			<title>网站标题</title>
+			<style>
+				#div1{width:300px;height:150px;background:red;margin:auto;}
+				#div2{width:300px;height:150px;background:#999;margin:30px auto;display:none;}
+			</style>
+			
+			<script type="text/javascript">
+			var timer;
+				window.onload=function(){
+					var oDiv1=document.getElementById("div1");
+					var oDiv2=document.getElementById("div2")
+					var timer;
+					oDiv1.onmouseover=function(){
+						oDiv2.style.display="block";
+						clearTimeout(timer)
+					}
+					oDiv2.onmouseover=function(){
+						oDiv2.style.display="block";
+						clearTimeout(timer);					
+					}
+					
+					oDiv1.onmouseout=function(){
+						timer=setTimeout(function(){oDiv2.style.display="none";},300);
+					}
+					
+					oDiv2.onmouseout=function(){
+						timer=setTimeout(function(){oDiv2.style.display="none";},300);
+					
+					}
+
+
+
+
+
+				}
+			</script>
+	 </head>
+	 
+	 <body>
+		<div id="div1"></div>
+		<div id="div2"></div>
+	 </body>
+</html>

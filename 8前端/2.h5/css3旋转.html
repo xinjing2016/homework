@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>css3旋转背景位置</title>
+
+	<style>
+		*{margin:0;padding:0;}
+		body{width:280px;margin:0 auto;}
+		.auto{margin-top:40px;}
+		.auto-rotate{
+			color:#333;
+			font-weight:bold;
+			font-family:sans-serif;
+		}
+		span{font-size:40px;color:#000;font-weight:bold;
+		font-family:sans-serif;cursor:pointer;}
+		.anticlockwise{float:left;}
+		.clockwise{float:right}
+		.rotate{width:273px;height:273px;margin:auto;
+		background:url("img/gqSTTeD.jpg") no-repeat;}
+		
+
+
+
+		input:checked ~ .rotate{
+			animation:clockwise 1s steps(30) infinite;
+		}
+		input:checked ~ span{display:none;}
+
+		@keyframes clockwise{
+			0%{background-position:0px 0px;}
+			100%{background-position:-8192px 0px;}
+		}
+		@keyframes anticlockwise{
+			0%{background-position:-8192px 0px;}
+			100%{background-position:0px 0px;}
+		}
+
+
+		span.clockwise:hover ~ .rotate{animation:clockwise 1s steps(30) infinite;}
+		span.anticlockwise:hover~ .rotate {animation:anticlockwise 1s steps(30) infinite;}
+
+
+
+
+
+
+
+
+
+	</style>
+
+ </head>
+
+  	<body><!--身体-->
+		<input id="auto" class="auto" type="checkbox" checked / >
+		<label class="auto-rotate" for="auto">Auto &#x21bb;</label><br/>
+		<span class="anticlockwise">&#x2190;</span>
+		<span class="clockwise">&#x2192;</span>
+		<div class="rotate"></div>
+	</body>
+
+</html>

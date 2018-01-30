@@ -1,0 +1,67 @@
+@charset "utf-8";
+/******
+* CSS 手机样式
+*/
+
+html,body{width:100%;height:100%; overflow:auto;}
+/*导航*/
+.head_nav{bottom:10px; left:10px;}
+.head_nav a.logo{width:60px; height:60px;  margin:8px 6px; background-size:60px 60px;}
+.head_nav ul {display:block; line-height:30px; position:absolute; top:-180px;}
+.head_nav ul li.title{font-size:1em;}
+.head_nav ul li{ font-size:0.8em; }
+.head_nav ul li{transform:translateX(-200%); -webkit-transform:translateX(-200%); }
+.head_nav ul li:nth-child(1){transition-delay:0.1s; -webkit-transition-delay:0.1s;}
+.head_nav ul li:nth-child(2){transition-delay:0.2s; -webkit-transition-delay:0.2s;}
+.head_nav ul li:nth-child(3){transition-delay:0.3s; -webkit-transition-delay:0.3s;}
+.head_nav ul li:nth-child(4){transition-delay:0.4s; -webkit-transition-delay:0.4s;}
+.head_nav ul li:nth-child(5){transition-delay:0.5s; -webkit-transition-delay:0.5s;}
+.head_nav ul li:nth-child(6){transition-delay:0.6s; -webkit-transition-delay:0.6s;}
+/*点击logo 出来的样式*/
+.head_nav ul.up li{transform:translateX(0px); -webkit-transform:translateX(0px);}
+
+/****
+*div+p
+选择紧接在 <div> 元素之后的所有 <p> 元素
+*
+*p~ul
+选择前面有 <p> 元素的每个 <ul> 元素。
+**/
+/*banner 触屏效果
+正确的css样式处理 */
+/*手机*/
+.banner{width:100%;height:100%; overflow:hidden; position:static; }
+/*向下的箭头*/
+.banner ul li a.up_click,.banner ul li a#up_top{display:none;}
+.banner .slider{width:500%; position:relative; left:0px; }
+.banner .slider li{width:20%; height:100%; float:left; position:relative; }
+/*第二屏*/
+.b_anim .anim_up div.box_2,.b_anim .anim_out div.box_2{ width:60%; font-size:1em;  line-height:1em; margin-left:0px; padding-top:2em;}
+.anim{transition:left 500ms linear;} /*css3  过度  指left0 -100% 过总共发生的时间 */
+/*第三屏*/
+.anim_text{left:8%;top:28%;width:40%; font-size:0.6em; line-height:1.2em; color:#Fff;}
+/*第四屏*/
+.coffeeList dl dd a{padding:2px 10px; font-size:0.6em; min-width:50px;}
+/*第五屏  实在是太不好看了，所以 自己发挥想象力*/
+.box_log{width:100%;margin:0px auto; padding:6% 0px; color:#fff;}
+.box_log div{padding-top:1rem; padding-bottom:1rem;float:left; height:auto; width:35%;}
+.box_log .log_left{border-right:1px solid #ccc; padding-right:10%; text-align:right; }
+.box_log .log_right{border-left:1px solid #ccc; padding-left:10%;}
+/*登表单*/
+.log_left  h1{width:100%; font-size:0.7em;    }
+.log_left dl{width:100%; height:2em; line-height:2em; margin:0px 0px;}
+.log_left dl dt{float:left;width:45%;height:2em; font-size:0.6em;}
+.log_left dl dd{float:left;width:50%;height:2em; font-size:1em;}
+.log_left dl dd input{width:78%; border-radius: 20px; padding:3px 12px; font-size:0.6em;}
+
+/*关注微信*/
+.box_log .log_right dl dd{line-height:1.2em;font-size:0.8em; }
+/*手机样式*/
+.nav_mob{width:100%;display:block;}
+.nav_mob a{display:block;width:33%;float:left; }
+.nav_mob a dl{width:100%;box-sizing: border-box; -webkit-box-sizing: border-box; border-right:1px solid #ccc;
+border-bottom:1px solid #ccc; text-align:center;padding:5% 0;}
+.nav_mob a:nth-child(3n) dl{border-right:none;}
+.nav_mob a dl dt{}
+.nav_mob a dl dt img{width:50%;} 
+.nav_mob a dl dd{padding-top:5px; color:#5a1903; font-size:1.2em; }

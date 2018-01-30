@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>jq选择器</title>
+ </head>
+ <body>
+	
+	<div >
+		<h4>论语</h4>
+		<div class="f">子在川上曰</div>
+		<p id="myp">shizehrushi</p>
+		<p>bushezouye</P>
+	</div>
+
+
+
+
+ <script src="js/jquery.js"></script>
+ <script>
+ $(function(){
+	$(".f").css("font-size","20px");
+	$("#myp").css("color","#ffff00");
+	$("h4").css("background","#ffff33");
+	//$("*").css("background","red");
+	//alert("aa");
+	$(".f,#myp").css({"font-size":"10px","background":"blue"});//josn格式
+	});
+ </script>
+	
+ </body>
+</html>

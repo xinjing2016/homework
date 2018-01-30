@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>bom</title>
+ </head>
+ <body>
+  <form id="form">
+	<input name="sex" />
+  </form>
+ </body>
+</html>
+<script>
+//浏览器对象模型 bom
+
+document.onclick=function(){
+	window.open('www.baidu.com','_self');//会阻止掉打开新窗口
+	window.close();//bs会阻止关闭自身页面，一般不用
+	alert(window.navigator.userAgent);//判断是不是ie
+	alert(typeof( window.location.href));//浏览器的地址
+	window.location.href="http://www.baidu.com";
+	window.location.search = "";//指向后台的某一个模块
+	window.location.hash = '#';//浏览器记录有关锚点锚点
+	alert(document.body.scrollTop);//只兼容谷歌
+	document.documentElement.scrollTop;//除了谷歌都兼容
+	 
+	var st = document.body.scrollTop || document.documentElemnt.scrollTop;
+
+	document.body.scrollTop = 500;
+	document.documentElement.scrollTop = 500;
+
+	window.onsrcoll = function(){
+		alert( 1 );//浏览器滚动事件
+	}
+
+	window.onresize = function(){
+		console.log( 2 );
+	}
+	console.time(1);
+	//code 执行的时间
+	console.timeEnd(1);
+	// 
+	var form = document.getElementById('form');
+	form.sex.value = 'd';//跟表单里面的ID不获取也可直接用，但不推荐
+}
+</script>

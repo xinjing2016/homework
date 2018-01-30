@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>tab</title>
+		<script type="text/javascript" src="js/jquery-2.1.0.js" ></script>
+		<style>
+			*{margin: 0;padding: 0;}
+			ul,ol,li{list-style: none;}
+			.clearfix:after {
+				visibility: hidden;
+				display: block;
+				font-size: 0;
+				content: " ";
+				clear: both;
+				height: 0;
+				}
+				* html .clearfix             { zoom: 1; } /* IE6 */
+				*:first-child+html .clearfix { zoom: 1; } /* IE7 */
+			.xtabcon{margin: 50px auto;width: 500px;box-shadow: 0 0 5px #ddd;
+			}
+			.xtab li{float:left;width: 50px;height: 50px;
+			line-height: 50px;text-align: center;cursor: pointer;}
+			.xtab li.act{background:black;color: wheat;}
+			.xcon{position: relative;height: 200px;}
+			.xcon li{width: 200px;height: 200px;
+			position: absolute;display: none;}
+			.xcon li.actt{display: block;background: #ddd;}
+		</style>
+	</head>
+	<body>
+		
+	<div class="xtabcon">	
+		<ol class="xtab clearfix">
+			<li class="act">1</li>
+			<li>2</li>
+			<li>3</li>	
+			<li>2</li>
+		</ol>
+		<ul class="xcon">
+			<li class="actt">1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>2</li>
+		</ul>
+	</div>	
+	
+	<script>
+		(function($){
+			$.fn.xtab = function(options){
+				var def = {
+						event : 'mouseover',
+						act :{
+							background:'red',
+							color:'black'
+						},
+						actn :{
+							background:'white',
+							color:'black'
+						}
+						
+					};
+				var ops = $.extend({},def,options);
+				var that = $(this);
+				var $tabs = that.find('ol li');
+				var $cons = that.find('ul li');
+				var index = 0;
+	
+				function move(index){
+					$tabs.css(ops.actn);
+					$tabs.eq(index).css(ops.act);
+					$cons.eq(index).addClass('actt').siblings().removeClass('actt');
+				}
+				
+				move(index);
+				$tabs[ops.event](function(){
+					index = $(this).index();
+					move(index);
+				})
+				
+			}
+		})(jQuery)
+	</script>
+	<script>
+		$('.xtabcon').xtab({
+			//event : 'click'
+			
+		})
+	</script>
+	</body>
+</html>

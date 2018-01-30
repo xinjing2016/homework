@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>拖拽</title>
+  <script src="js/jquery-1.11.1.js"></script>
+ </head>
+ <body>
+  <div id="div" style="width:100px;height:100px;background:red;position:absolute;pointer:cursor">1234513</div>
+
+
+<script>
+	$(function(){
+		
+		var disx = 0;
+		var disy = 0;
+
+		$('#div').on('mousedown',function(ev){
+			 disx = ev.pageX - $(this).offset().left;
+			 disy = ev.pageY - $(this).offset().top;
+			
+			 $(document).on('mouseover.tag',function(ev){
+				$('#div').css('left',ev.pageX-disx);
+				$('#div').css('top',ev.pageY-disy);			 
+			 });
+
+			 $(document).on('mouseup.tag',function(){
+				$(this).off('.tag');
+			 })
+			return false;
+		})
+		//$('#div').on('cmouese',function(){alert(1);})
+	})
+	
+</script>
+
+
+ </body>
+</html>

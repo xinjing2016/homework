@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>树形动画</title>
+ </head>
+ <body>
+  
+<ul >
+	<li >ghsretgr4tg
+		<ul >
+			<li>gawtgwatg</li>
+			<li>gwetg</li>
+			<li>dte</li>
+			<li>dgawete4t</li>
+		</ul>
+	</li>
+	<li>gsdgyr
+		<ul>
+			<li>gewta4e3w</li>
+			<li>dger</li>
+			<li>fswrt4e</li>
+			<li>gdayer4t5</li>
+		</ul>
+	</li>
+	<li>hersy546r
+		<ul>
+			<li>dsta3etg</li>
+			<li>fegwated</li>
+			<li>gdseate</li>
+			<li>erhsrf</li>
+		</ul>
+
+	</li>
+
+</ul>
+
+
+
+
+
+
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$("li:has(ul)").click(function(event)
+		{
+			if (this == event.target)
+			{
+				if ($(this).children().is(":hidden"))
+				{
+					$(this).children().show();
+				}
+				else{
+					$(this).children().hide();
+				}
+				
+			}
+			
+		});
+	});
+</script>
+
+
+
+
+
+
+
+
+
+ </body>
+</html>

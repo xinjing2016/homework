@@ -1,0 +1,85 @@
+@charset "utf-8";
+/******
+* CSS 手机样式
+*/
+
+.pagination{display: none;}
+#loadmore{display: block;}
+
+
+
+/*header*/
+.header-logo{width:60px;height:50px;background: url(../img/ico.jpg) no-repeat;display: block;background-size:60px 50px;}
+.header-search{width:200px;margin-top:8px;margin-right:20px;}
+
+/*nav*/
+.hnav{width:100%;background:rgba(0,0,0,0.7);position: absolute;z-index: 999;}
+.hnav .bignav li{border-bottom: 1px dashed #bbb;}
+.hnav .bignav li a{color: #FFFFFF;text-align:center;line-height: 38px;display: block;font-size: 1.2em;}
+.hnav-wrapper .subnav{display: none;}
+.sildeNavTitle{display: none;}
+
+
+
+
+/*banner*/
+#banner{height:200px;}
+#banner .barrow span{display: none;}
+#banner a.one,#banner a.two,#banner a.three{height:200px;background-size: cover;}
+.dot{bottom: 10px;}
+
+
+
+/*about*/
+.aboutTitle{margin:20px  auto;}
+.aboutTitle h2{font-size:1.5em;}
+.aboutdes{margin:0px 25px;}
+.about .row .aboutdes span {margin-bottom: 8px;display: block;text-align:center;}
+.about .row .aboutdes a{margin-top:30px;}
+
+/*product*/
+.prolist .proli{position:relative;padding:30px;}
+
+
+/*adverture1*/
+.adverture1{height:250px;background-size: cover;}
+
+/*adverture2*/
+.adverture2{height:250px;background-size: cover;}
+
+/*news*/
+.news .newsli{margin-top:10px;padding:15px;}
+.news .newsli .h3{text-align: center;}
+.newstool{display:none;}
+
+/*aboutbanner page 关于我们*/
+#aboutbanner{height:150px;}
+#slideNav{border:1px dashed gray;padding: 0px;}
+#slideNav .sildeNavTitle{padding:10px;float:left;}
+#slideNav li{float:left;margin: 5px;}
+
+#slideNav span{display: none;}
+.breadnav{display:none;}
+.article .author .authorwrapper{margin:0 auto;width:200px;}
+.article .author .authorwrapper div{display: inline-block;margin-left:20px;}
+#maincon {padding: 0px 0px;}
+#maincon .article h1{font-size:1.8em;font-weight: bold;}
+
+.mainconfooter .bdsharebuttonbox ,.mainconfooter >div{display:none;}
+
+
+.timer{float:none;}
+
+
+/*conbanner page con*/
+.forms .form-horizontal .form-group {margin-right: 15px;margin-left: 15px;}
+
+
+
+
+
+
+
+
+
+

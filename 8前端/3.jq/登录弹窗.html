@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>登录弹窗</title>
+  <script src="js/jquery-1.11.1.js"></script>
+  <style>
+  div{width:300px;height:300px;border:1px solid #ddd;position:relative;background:#ffcccc;display:none;}
+  span{float:right;cursor:pointer;}
+  body{height:2000px;}
+  </style>
+ </head>
+ <body>
+  
+<input type='button' value='login'/>
+
+<!-- <div>
+	<span>X</span>
+</div> -->
+
+<script>
+$(function(){
+	$login_box = $('<div><span>X</span></div>');
+	$('body').append($login_box);
+	$('input').click(function(){		
+		$login_box.fadeToggle(400);
+		var $x = $(window).width() - $login_box.width();
+		var $y = $(window).height() - $login_box.height();
+		$login_box.css({'left':$x/2,'top':$y/2});
+	});
+	$(window).on('resize scroll',function(){
+		var $x = $(window).width() - $login_box.width();
+		var $y = $(window).height() - $login_box.height();
+		$login_box.animate({'left':$x/2,'top':$y/2+$(document).scrollTop()},200);
+	});
+	$('span').click(function(){  
+		$login_box.fadeToggle(100);
+	});
+	
+
+
+})
+
+  
+</script>
+ </body>
+</html>

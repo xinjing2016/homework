@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Author" content=" ">
+    <title>Document</title>
+    <style type="text/css">
+        *{margin: 0;padding: 0;}
+        a{text-decoration: none;}
+        ul,li{list-style: none;}
+        body{font-size: 14px;font-family: "微软雅黑";overflow: hidden;background: url("http://desk.fd.zol-img.com.cn/t_s960x600c5/g5/M00/02/00/ChMkJ1bKw6qIEBLUAAO0Ymg_2FsAALG6gM0sdsAA7R6833.jpg") no-repeat fixed top left;background-size: cover}
+        #btn{width: 100px;height: 40px;text-align: center;line-height: 40px;;background: #FA1F76;font-size: 18px;font-family:"Vivaldi";font-weight:bold;color: #fff;position: fixed;right: 50px;bottom: 50px;border-radius:10px;cursor: pointer;box-shadow: 1px 1px 1em #09504d;animation:blings 2s ease infinite;}
+        #content{width: 600px;height: 300px;padding:50px;position: fixed;top: 100px;left: calc(50% - 350px);}
+        h1,p{line-height: 35px;color: #A435CE;font-size: 20px;letter-spacing: 2px;
+                font-weight: 400;
+                opacity: 0;
+                text-shadow:-1px 0 #EE0B99,
+                            0 -1px #EE0B99,
+                            1px 0 #FFFFFF,
+                            0 1px #ffffff;
+        }
+        @keyframes blings{
+            0%{transform:scale(1,1);}
+            50%{transform:scale(0.9,0.9);}
+            100%{transform:scale(1,1);}
+        }
+    </style>
+</head>
+<body>
+    <audio src="http://mp3-cdn.luoo.net/low/luoo/radio758/09.mp3" autoplay loop="loop"></audio>
+    <div id="content">
+        <h1>新年快乐,同学们!么么哒!</h1>
+        <p>技术成就梦想,见未来,见更好的自己</p>
+        <p>学会宽容，要有一颗宽容的爱心！</p>
+        <p>天再高又怎样，踮起脚尖就更接近阳光。</p>
+        <p>命运如同手中的掌纹，无论多曲折，终掌握在自己手中。</p>
+        <p>别小看任何人，越不起眼的人。往往会做些让人想不到的事。</p>
+        <p>用爱生活，你会使自己幸福！用爱工作，你会使很多人幸福！</p>
+        <p>我们什么都没有，唯一的本钱就是青春。奋斗让我改变命运！</p>
+        <p>不要畏惧失败,失败不可怕,那是一个新的起点</p>
+        <p style="text-indent: 20em">——小祺老师^_^</p>
+    </div>
+    <div id="btn" onclick="print()">click Me</div>
+    <canvas id="canvas"></canvas>
+    <script type="text/javascript">
+        var w = document.documentElement.clientWidth;
+        var h = document.documentElement.clientHeight;
+        var canvas = document.getElementById("canvas");
+        var ctx = canvas.getContext("2d");
+        canvas.width = w;
+        canvas.height = h;
+        //max particles
+        var mp = 90;
+        //雪花数组
+        var particles = [];
+
+        for(var i=0;i<mp;i++){
+            particles.push({
+                x:Math.random()*w,
+                y:Math.random()*h,
+                r:Math.random()*4+1,
+                d:Math.random()*mp
+            });
+        };
+
+        //雪花
+        function draw(){
+            ctx.clearRect(0,0,w,h);
+            ctx.beginPath();
+            ctx.shadowColor = "#FF80FF";
+            ctx.shadowOffsetX = 2;
+            ctx.shadowOffsetY = 0;
+            ctx.shadowBlur = 10;
+            ctx.fillStyle = "rgba(255, 255, 255, 0.8)";
+            ctx.strokeStyle = 'rgba(255, 255, 255, 0.4)';
+            // ctx.arc(100,100,50,0,Math.PI*2);
+            for(var i=0;i<particles.length;i++){
+                var p = particles[i];
+                //确定圆心点坐标
+                ctx.moveTo(p.x, p.y);
+                ctx.arc(p.x,p.y,p.r,0,Math.PI*2,true);
+            };
+            ctx.fill();
+            ctx.stroke();
+            update();
+        };
+        setInterval(draw,33);
+
+
+        var angle = 0;
+        function update(){
+            angle += 0.01;
+            for(var i=0;i<mp;i++){
+                var p = particles[i];
+                //下落速度
+                p.y += Math.cos(angle+p.d) + 1 + p.r/6;
+                p.x += Math.sin(angle)*2;
+                //限定边界
+                if(p.y>h || p.x>w+5 || p.x<-5){
+                    p.y = -5;
+                    p.x = Math.random()*w;
+                };
+            };
+        };
+
+
+        var oP = document.getElementById("content").children;
+        var index = 0;
+        var len = oP.length;
+        function print(){
+            var arrP = [];
+            for(var i=0;i<len;i++){
+                arrP.push(oP[i]);
+            };
+            fadeOut(arrP[index]);
+            index++;
+            console.log(index);
+            timer = setTimeout(print , 1500);
+            if(index == len)clearTimeout(timer);
+        };
+
+        //简版淡出
+        function fadeOut(obj){
+            var num = 0;
+            var timer = setInterval(function(){
+                num++;
+                obj.style.opacity = num/10;
+                if(num >= 10){
+                    clearInterval(timer);
+                }
+            },50);
+        };
+    </script>
+</body>
+</html>

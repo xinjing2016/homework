@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+ <head>
+ <!--声明当前页面的编码格式 UTF-8（国际编码）gbk(中文简体)-->
+	<meta charset="UTF-8">
+	<!--声明当前页面的三要素-->
+	<title>潭州咖啡屋首页</title>
+	<meta name="Keywords" content="html5，css3">
+	<meta name="Description" content="响应式网站">
+	<meta name="copyright" content="零曦" >
+	<!--ico 图片 -->
+	<link rel="shortcut icon" href="images/xi.ico">
+	<link rel="apple-touch-icon" href="images/xi.ico">
+	<!--- 不同借口的申明，宽度= 设备宽度 device-width 页面显示的倍数 nitial-scale， 用户是否自动缩放user-scakable  为了在手机上正常显示---->
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+	<link rel="stylesheet" href="css/c_style.css"><!--公共样式 -->
+	<link rel="stylesheet" media="screen and (min-width:980px)" href="css/c_pc.css"><!--大于980px的时候-->
+	<link rel="stylesheet" media="screen and (max-width:980px) and (min-width:780px)" href="css/c_flat.css"><!--平板的时候-->
+	<link rel="stylesheet" media="screen and (max-width:780px)" href="css/c_mobile.css"><!--手机的时候-->
+	<script src="js/jquery-2.1.3.min.js"></script>
+	<script src="js/c_index.js"></script>
+	</head>
+ <body>
+ <!--导航 -->
+	<nav  class="head_nav">
+		<a href="#" class="logo"></a>
+		<ul id="head_list">
+			<li class="title">潭州·咖啡</li>
+			<li> <a href="#">咖啡文化</a></li>
+			<li> <a href="#">闲叙咖啡</a></li>
+			<li> <a href="#">饮品美味</a></li>
+			<li> <a href="#">新闻资讯</a></li>
+			<li> <a href="#">联系我们</a></li>
+		</ul>
+	</nav>
+
+ <!--内容区域-->
+	<section>
+		<div class="banner" id="jq_banner">
+			<ul class="slider" id="slider">
+				<li>
+					<a class="up_click"></a>
+				</li>
+				<li>
+					<div class="b_anim">
+						<div class="anim_up">
+							<div class="box_1"><img src="images/coffee01.jpg" alt="享受完美的咖啡生活"/></div>
+							<div class="box_2" id="coffee_txt"> 
+								咖啡喝的是一种心情</br>与你，享受每一个午后一起谈笑风生的时光······
+							</div>
+						</div>
+
+						<div class="anim_out">
+							<div class="box_1"><img src="images/coffee02.jpg" alt="享受完美的咖啡生活"/></div>
+							<div class="box_2" id="coffee_text"> 
+								咖啡喝的是一种情调</br>深吸一口气，补充氧气、勇气，还有咖啡的馨香在······
+							</div>
+							
+						</div>
+					</div>
+					
+					<a class="up_click"></a>
+				</li>
+				<li>
+					<div class="anim_text"  id="coffee_Kaweh">
+						“咖啡”一词源自希腊语“Kaweh”，意思是“力量与热情”。咖啡树是属山椒科的常绿灌木，日常饮用的咖啡是用咖啡豆配合各种不同的烹煮器具制作出来的，而咖啡豆就是指咖啡树果实内之果仁，再用适当的烘焙方法烘焙而成。
+					</div>
+					<a class="up_click"></a>
+				</li>
+				<li>
+					<div class="coffeeList">
+						<dl>
+							<dt><a href="#"><img src="images/coffee_01.png"/></a></dt>
+							<dd><a href="#">浓缩康保蓝</a></dd>
+						</dl>
+						<dl>
+							<dt><a href="#"><img src="images/coffee_02.png"/></a></dt>
+							<dd><a href="#">冰拿铁</a></dd>
+						</dl>
+						<dl>
+							<dt><a href="#"><img src="images/coffee_03.png"/></a></dt>
+							<dd><a href="#">意式浓缩咖啡</a></dd>
+						</dl>
+						<dl>
+							<dt><a href="#"><img src="images/coffee_04.png"/></a></dt>
+							<dd><a href="#">美式咖啡</a></dd>
+						</dl>
+						<dl>
+							<dt><a href="#"><img src="images/coffee_05.png"/></a></dt>
+							<dd><a href="#">卡布奇诺</a></dd>
+						</dl>
+						<dl>
+							<dt><a href="#"><img src="images/coffee_06.png"/></a></dt>
+							<dd><a href="#">冰摩卡</a></dd>
+						</dl>
+					</div>
+					<a class="up_click"></a>
+				</li>
+				<li>
+					<div class="box_log">
+						<div class="log_left">
+								<h1>潭州咖啡馆会员登录</h1>
+								<dl>
+									<dt>账号/邮箱:</dt>
+									<dd><input type="text" placeholder="请输入你的用户名"/></dd>
+								</dl>
+								<dl>
+									<dt>密码:</dt>
+									<dd><input type="text" placeholder="请输入你的密码"/></dd>
+								</dl>
+								<dl>
+									<dt></dt>
+									<dd><input type="button" value="登录"/></dd>
+								</dl>
+						</div>
+
+
+						<div class="log_right">
+								<dl>
+									<dt><img src="images/weix.png"  width="80%"/></dt>
+									<dd>扫一扫</dd>
+									<dd>关注潭州零曦</dd>
+								</dl>
+								<dl>
+									<dt><img src="images/lingxi.png" width="100%"/></dt>
+								</dl>
+						</div>
+					</div>
+					<a id="up_top"></a>
+				</li>
+			</ul>
+		</div>
+		<div class="nav_mob">
+			<a href="http://www.baidu.com"><dl><dt><img src="images/ico_01.png"/></dt><dd>饮料</dd></dl></a>
+			<a href="http://www.baidu.com"><dl><dt><img src="images/ico_02.png"/></dt><dd>饮料</dd></dl></a>
+			<a href="http://www.baidu.com"><dl><dt><img src="images/ico_03.png"/></dt><dd>饮料</dd></dl></a>
+			<a href="http://www.baidu.com"><dl><dt><img src="images/ico_04.png"/></dt><dd>饮料</dd></dl></a>
+			<a href="http://www.baidu.com"><dl><dt><img src="images/ico_05.png"/></dt><dd>饮料</dd></dl></a>
+			<a href="http://www.baidu.com"><dl><dt><img src="images/ico_06.png"/></dt><dd>饮料</dd></dl></a>
+			<a href="http://www.baidu.com"><dl><dt><img src="images/ico_07.png"/></dt><dd>饮料</dd></dl></a>
+			<a href="http://www.baidu.com"><dl><dt><img src="images/ico_08.png"/></dt><dd>饮料</dd></dl></a>
+			<a href="http://www.baidu.com"><dl><dt><img src="images/ico_09.png"/></dt><dd>饮料</dd></dl></a>
+		</div>
+	<script src="js/index_m.js"></script>
+	</section>
+
+ </body>
+</html>

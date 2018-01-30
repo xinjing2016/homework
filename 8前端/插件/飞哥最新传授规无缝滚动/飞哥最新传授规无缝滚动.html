@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="keywords" content="关键词1,关键词2"/>
+		<meta name="decription" content="" />
+		<title>js案例</title>
+		<!--内部css样式-->
+		<style type="text/css">
+			*{margin:0;padding:0;}
+			ul li{list-style-type:none;}
+			a{text-decoration:none;}
+			a:hover{text-decoration:none;}
+			.main{width:1200px;height:180px;margin:100px auto;position:relative;overflow:hidden;}
+			.main ul{width:1000%;height:180px;position:absolute;top:0px;left:0px;cursor:pointer;}
+			.main ul li{width:288px;height:180px;padding:0 6px;float:left;}
+		</style>
+		<!--引入jquery封装库-->
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<!--内部js-->
+		<script type="text/javascript">
+			var time=null;//定时器
+			$(function(){
+				
+				//自动轮播
+				time=setInterval("scroll()",2000);
+				
+				//鼠标移上去效果
+				$(".main ul").hover(function(){
+					clearInterval(time);
+				},function(){
+					time=setInterval("scroll()",2000);
+				});
+			});
+			
+			//滚动方法
+			function scroll(){
+				$(".main ul").animate({left:"-300px"},1000,function(){
+					var aLi=$(".main ul li").eq(0);
+					aLi.remove();
+					$(".main ul").append(aLi);
+					$(".main ul").css("left","0px");
+				});
+			}
+
+		</script>
+	</head>
+	<body>
+		<div class="main">
+			<ul>
+				<li><img src="images/02/s1.jpg" alt="小图"/></li>
+				<li><img src="images/02/s2.jpg" alt="小图"/></li>
+				<li><img src="images/02/s3.jpg" alt="小图"/></li>
+				<li><img src="images/02/s4.jpg" alt="小图"/></li>
+				<li><img src="images/02/s5.jpg" alt="小图"/></li>
+				<li><img src="images/02/s6.jpg" alt="小图"/></li>
+				<li><img src="images/02/s7.jpg" alt="小图"/></li>
+				<li><img src="images/02/s8.jpg" alt="小图"/></li>
+			</ul>
+		</div>
+	</body>
+</html>

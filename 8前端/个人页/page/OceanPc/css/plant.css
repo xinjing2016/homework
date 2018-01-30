@@ -1,0 +1,48 @@
+/*plant*/
+
+
+/************************************  nav  ************************************/
+div.pSub{background:url("../images/plant/bg/bg_02.jpg")no-repeat center;height:100px}
+div.nav div.nav-wrapper{width:1000px;height:116px}
+.nav ul li.plant a span{background-position:4px 0px;}
+.nav ul li.island a:hover span{background-position:-117px 0px;}
+.nav ul li.animal a:hover span{background-position:-56px 0px;}
+.nav ul li.konws a:hover span{background-position:-180px 0px;}
+.nav ul li.about a:hover span{background-position: -236px 0px;}
+
+.secondNav-wrapper a{margin-right: 70px;width: 120px;}
+.secondNav-wrapper a span{background:url("../images/island/bg/islandsp.png") no-repeat;}
+.secondNav-wrapper a.pSub-zl span{background-position:0px -107px;width:97px;}
+.secondNav-wrapper a.pSub-hsl span{background-position:-117px -108px;}
+
+
+
+/************************************  banner  ************************************/
+.pBanner{background:url("../images/plant/bg/bg_03.jpg")no-repeat center;height:379px;width:100%;min-width:1000px;}
+
+
+/************************************  marngrove  ************************************/
+div.marngrove{width:100%;height:1080px;background:url("../images/plant/bg/bg_04.jpg")no-repeat center;min-width:1000px;}
+div.m-wrapper{width:900px;padding-top: 198px;}
+div.marngrove-header{border-bottom: 2px solid #078007}
+div.new-header{border-bottom: 2px solid #078007;margin-top: 25px;}
+div.content-left{width: 293px;}
+div.content-left img,div.content-list img{border: 1px solid green;}
+div.content-left h4{font-size: 20px;margin: 6px 0px;}
+div.content-left p{font-size: 18px;text-indent: 2em;}
+div.content-right{width: 597px;}
+div.content-right div.content-list{margin:0px 7px 10px 0px;}
+div.content-list h4{font-size: 16px;font-weight: normal;margin-top: -4px;}
+div.wrapper-next{width:100px;height:100px;background:white;margin-top:100px;border-radius: 50px;}
+
+
+/************************************  algae  ************************************/
+.algae .wrapper-marngrove{margin-top:-70px;}
+.algaeBg{width:100%;height:25px;background:url("../images/plant/bg/bg_05_01.png")no-repeat center;min-width:1000px;margin-top:-25px;}
+div.algae{width:100%;height:1055px;background:url("../images/plant/bg/bg_05.jpg")no-repeat center;min-width:1000px;}
+div.algae p,div.algae h4,div.alage div,div.algae .ul-list ul li{color:white;}
+
+
+
+
+body{background:#aee56f;}

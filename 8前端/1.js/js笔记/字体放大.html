@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>字体放大</title>
+  <style>
+
+	#aa{width:300px;height:300px;border:1px solid #f00;word-break:break-all;overflow:auto;font-size:15px;}
+
+  </style>
+ </head>
+ <body>
+
+
+<input id="big" type="button" value="big" />
+<input id="small" type="button" value="small" />
+<div id="aa">
+
+	<p>wongeirhgogheowugjvswhgenfkdsf</p>
+	<p>wongeirhgogheowugjvswhgenfkdsfwongeirhgogheowugjvswhgenfkdsfwongeirhgogheowugjvswhgenfkdsfwongeirhgogheowugjvswhgenfkdsfwongeirhgogheowugjvswhgenfkdsfwongeirhgogheowugjvswhgenfkdsf</p>
+
+</div>
+  </body>
+
+<script>
+window.onload=function(){
+
+var obig=document.getElementById("big");
+var osmall=document.getElementById("small");
+var aa=document.getElementById("aa");
+
+var num=15;
+obig.onclick=function(){
+	num++;
+	if(num>=12 && num<=20){
+	aa.style.fontSize=num+"px";}
+	else num=20;
+
+}
+
+osmall.onclick=function(){
+	num--;
+	if(num>=12 && num<=20){
+	aa.style.fontSize=num+"px";}
+	else num=12;
+}
+}
+
+//alert("dd");
+
+</script>
+
+
+
+
+</html>

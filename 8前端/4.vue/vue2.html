@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<script type="text/javascript" src="js/vue.js" ></script>
+		<title></title>
+		<script>
+			window.onload=function(){
+				var c =new Vue({
+					el : "body",
+					data : {
+						flag : 0
+					},
+					methods : {
+						show :function(){
+							this.flag = !this.flag;
+							console.log(this.flag);
+						}
+					}
+				});
+				
+			}
+		</script>
+	</head>
+	<body>
+		<input type='button' value="按钮" v-on:click="show()" />
+		<div style="width: 100px;height:100px;background:red" 
+			v-show="flag"></div>
+	</body>
+</html>

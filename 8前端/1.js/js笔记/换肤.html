@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>换肤</title>
+  <style>
+  .a{background:red;border:1px solid yellow;}
+  .b{width:500px;}
+  </style>
+ </head>
+ <body>
+  
+	<input id="back" type="button" value="yellow background"/>
+	<input id="width" type="button" value="width"/>
+	<div id="con">
+		<p>我们的参考手册涵盖了网站技术的方方面面。
+		其中包括W3C的标准技术：HTML、CSS、XML 。以及其他的技术，诸如JavaScript、PHP、SQL等等。我们的参考手册涵盖了网站技术的方方面面。
+		其中包括W3C的标准技术：HTML、CSS、XML 。以及其他的技术，诸如JavaScript、PHP、SQL等等。我们的参考手册涵盖了网站技术的方方面面。
+		其中包括W3C的标准技术：HTML、CSS、XML 。以及其他的技术，诸如JavaScript、PHP、SQL等等。我们的参考手册涵盖了网站技术的方方面面。
+		其中包括W3C的标准技术：HTML、CSS、XML 。以及其他的技术，诸如JavaScript、PHP、SQL等等。</p>
+	</div>
+ </body>
+
+<script>
+	window.onload=function(){
+		var ba=document.getElementById("back");
+		var width=document.getElementById("width");
+		var con=document.getElementById("con");
+
+		
+		function add(obj,attr){
+		obj.className+=" "+attr;
+		}
+
+		ba.onclick=function(){add(con,"a");}
+		width.onclick=function(){add(con,"b");}
+
+
+		//alert("aa");
+	
+	}
+		
+</script>
+
+
+
+</html>

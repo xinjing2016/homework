@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <script src="js/jquery.js"></script>
+  <title>填色</title>
+  <style>
+  div{float:left;width:100px;height:100px;border:1px solid black;margin-left:10px}
+  span:hover{cursor:move;}
+  </style>
+ </head>
+ <body>
+  
+
+ <div></div>
+ <div></div>
+ <div></div>
+ <div></div>
+
+  <span>red</span>
+  <span>yellow</span>
+  <span>green</span>
+  <span>blue</span>
+  <input type="button" value="del red" >
+
+
+<script>
+var $div = $('div');
+var $span = $('span');
+var $color = null;
+var $input = $('input');
+
+//alert($input.length);
+$span.click(function(){
+	$color = $(this).html();
+});
+$div.click(function(){
+	$(this).css({'background':$color});
+});
+$input.click(function(){
+	//alert($input.length);
+	$('div[style*=red]').css({'background':''});
+});
+
+
+//$('input[value]').css();
+//$('input[value=123]').css();
+//$('input[value^=123]').css();
+//$('input[value$=123]').css();
+//$('input[value*=123]').css();
+
+//$('div[class="box boxs"]')//多属性使用分号
+</script>
+
+ </body>
+</html>

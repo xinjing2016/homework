@@ -1,0 +1,286 @@
+<!doctype html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=100%; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+		<title>微时代移动应用======王超</title>
+		<meta name="Keywords" content="关键词,关键词">
+		<meta name="description" content="">
+		
+		<style type="text/css">
+			*{margin:0;padding:0;}
+			body{background:url("images/bg.jpg") no-repeat;font-size:12px;font-family:"微软雅黑";color:#666;}
+
+		/*phone start*/
+			.phone{width:322px;height:641px;margin:30px auto;position:relative;}
+			.phone .p_top{height:42px;background:url("images/phone_top.png") no-repeat;}
+			.phone .p_info{height:20px;background:url("images/top.jpg") no-repeat;}
+			.phone .p_title{width:320px;height:40px;background:#000;text-align:center;line-height:40px;font-size:20px;border-left:1px solid #fff;border-right:1px solid #fff;}
+			.phone .p_con{width:320px;height:486px;border-left:1px solid #fff;border-right:1px solid #fff;background:url("images/1-1.jpg") top center;background-size:cover;overflow:hidden;}
+			.phone .p_bottom{height:47px;background:url("images/phone_bottom.png") no-repeat;}
+
+			.phone .p_music{width:40px;height:40px;display:block;position:absolute;top:125px;right:20px;border-radius:20px;
+			background:url(images/normalmusic.svg);background-size:cover;}
+		/*end phone*/
+
+
+		/*定义图片旋转动画的关键帧*/
+			@-webkit-keyframes arry {
+				from{
+					-webkit-transform:rotate(0deg)
+				} to {
+					-webkit-transform:rotate(360deg)
+				}
+			}
+
+		/*调用关键帧*/
+			.rotate{
+				-webkit-animation: arry 1.2s linear infinite;
+				animation: arry 1.2s linear infinite;
+			}
+			
+			.lrcLine{font-size:14px;padding-left:10px;line-height:30px;color:#41B457;}
+			.sel{color:red;font-size:30px;}
+			#lrc{display:none;}
+
+			.code{position:fixed;top:240px;right:200px;z-index:-1}
+
+			@media screen and (max-width:580px){
+				.phone{padding:1px;width:100%;margin:0px;}
+				.code,.phone .p_info,.phone .p_bottom,.phone .p_top{display:none;}
+				.phone .p_con,.phone .p_title{width:100%}
+				.phone .p_con{height:100%}
+			}
+		</style>
+
+	</head>
+<body>
+	<!--phone start-->
+	<div class="phone">
+		<div class="p_top"></div>
+		<div class="p_info"></div>
+		<div class="p_title">听妈妈的话</div>
+		<div class="p_con"></div>
+		<div class="vom">
+					<div class="voml">
+						<div class="hk"></div>
+					</div>
+		</div>
+		<div class="p_bottom"></div>
+		<a href="#" class="p_music"></a>
+	</div>
+
+	<div class="code">
+		<img src="images/code.png" width="150" height="160"/>
+	</div>
+	<!--end phone-->
+
+<!--
+<textarea id="lrc" cols="50" rows="10">
+	[ti:0]
+	[ar:0]
+	[al:0]
+	[offset:0]
+
+	[00:00.00]咱们结婚吧
+	[00:03.59]演唱：齐晨
+	[00:04.71]
+	[00:19.45]洁白的婚纱手捧着鲜花
+	[00:23.94]美丽得像童话
+	[00:28.11]想起那年初夏我为你牵挂
+	[00:32.44]在一起就犯傻
+	[00:34.91]丘比特轻轻飞过月光下
+	[00:39.25]潘多拉她听到了回答
+	[00:43.61]礼堂钟声在敲打幸福的密码
+	[00:52.43]哦My Love咱们结婚吧
+	[00:56.95]好想和你拥有一个家
+	[01:00.87]这一生最美的梦啊
+	[01:05.53]有你陪伴我同闯天涯
+	[01:09.50]哦My Love咱们结婚吧
+	[01:14.10]我会用一生去爱你的
+	[01:18.50]我愿把一切都放下
+	[01:22.99]给你幸福的家
+	[01:27.40]
+	[01:47.31]洁白的婚纱手捧着鲜花
+	[01:51.78]美丽得像童话
+	[01:56.03]想起那年初夏我为你牵挂
+	[02:00.41]在一起就犯傻
+	[02:02.60]丘比特轻轻飞过月光下
+	[02:07.27]潘多拉她听到了回答
+	[02:11.46]礼堂钟声在敲打幸福的密码
+	[02:20.19]哦My Love咱们结婚吧
+	[02:24.85]好想和你拥有一个家
+	[02:28.77]这一生最美的梦啊
+	[02:33.39]有你陪伴我同闯天涯
+	[02:37.35]哦My Love咱们结婚吧
+	[02:41.97]我会用一生去爱你的
+	[02:46.31]我愿把一切都放下
+	[02:50.80]给你幸福的家
+	[02:54.88]
+	[02:56.46]哦My Love咱们结婚吧
+	[03:01.30]好想和你拥有一个家
+	[03:05.21]这一生最美的梦啊
+	[03:09.92]有你陪伴我同闯天涯
+	[03:13.77]哦My Love咱们结婚吧
+	[03:18.38]我会用一生去爱你的
+	[03:22.66]我愿把一切都放下
+	[03:27.35]给你幸福的家
+	[03:31.01]
+</textarea>	-->
+
+<textarea id="lrc" cols="50" rows="10">
+	  [ti:0]
+	  [ar:0]
+	  [al:0]
+	  [offset:0]
+
+	[00:02.15]听妈妈的话
+	[00:04.15]作词：周杰伦 作曲：周杰伦
+	[00:06.15]演唱：周杰伦
+	[00:08.15]
+	[00:10.15]小朋友 你是否有很多问号
+	[00:12.96]为什么 别人在那看漫画
+	[00:15.49]我却在学画画 对着钢琴说话
+	[00:18.16]别人在玩游戏
+	[00:18.99]我却靠在墙壁背我的ABC
+	[00:21.43]我说我要一台大大的飞机
+	[00:23.98]但却得到一台旧旧录音机
+	[00:26.52]为什么要听妈妈的话
+	[00:28.54]长大后你就会开始懂了这段话 哼
+	[00:31.36]
+	[00:31.78]长大后我开始明白
+	[00:33.91]为什么我 跑得比别人快
+	[00:35.46]飞得比别人高
+	[00:36.61]将来大家看的都是我画的漫画
+	[00:39.18]大家唱的都是 我写的歌
+	[00:41.99]妈妈的辛苦 不让你看见
+	[00:44.54]温暖的食谱在她心里面
+	[00:47.09]有空就多多握握她的手
+	[00:49.71]把手牵着一起梦游
+	[00:51.84]
+	[00:52.15]听妈妈的话 别让她受伤
+	[01:02.22]想快快长大 才能保护她
+	[01:12.57]美丽的白发 幸福中发芽
+	[01:22.92]天使的魔法 温暖中慈祥
+	[01:32.22]
+	[01:33.09]在你的未来 音乐是你的王牌
+	[01:35.23]拿王牌谈个恋爱
+	[01:36.48]唉！我不想把你教坏
+	[01:38.23]还是听妈妈的话吧
+	[01:39.64]晚点再恋爱吧
+	[01:41.01]我知道你未来的路
+	[01:42.35]但妈比我更清楚
+	[01:44.00]你会开始学其他同学
+	[01:45.47]在书包写东写西
+	[01:46.53]但我建议最好写妈妈
+	[01:48.04]我会用功读书
+	[01:49.10]用功读书 怎么会从我嘴巴说出
+	[01:51.69]不想你输 所以要叫你用功读书
+	[01:53.43]
+	[01:53.66]妈妈织给你的毛衣
+	[01:54.96]你要好好的收着
+	[01:56.21]因为母亲节到的时候
+	[01:57.18]我要告诉她我还留着
+	[01:58.85]对了 我会遇到了周润发
+	[02:00.60]所以你可以跟同学炫耀
+	[02:02.51]赌神未来是你爸爸
+	[02:04.07]我找不到 童年写的情书
+	[02:05.59]你写完不要送人
+	[02:07.11]因为过两天你会在操场上捡到
+	[02:09.62]你会开始喜欢上流行歌
+	[02:11.73]因为张学友开始准备唱《吻别》
+	[02:13.94]
+	[02:14.40]听妈妈的话 别让她受伤
+	[02:24.82]想快快长大 才能保护她
+	[02:35.17]美丽的白发 幸福中发芽
+	[02:45.40]天使的魔法 温暖中慈祥
+	[02:55.54]听妈妈的话 别让她受伤
+	[03:06.07]想快快长大 才能保护她
+	[03:15.35]
+	[03:16.66]长大后我开始明白
+	[03:18.99]为什么我 跑得比别人快
+	[03:20.66]飞得比别人高
+	[03:21.76]将来大家看的都是我画的漫画
+	[03:24.16]大家唱的都是 我写的歌
+	[03:27.01]妈妈的辛苦 不让你看见
+	[03:29.68]温暖的食谱在她心里面
+	[03:32.22]有空就多多握握她的手
+	[03:34.81]把手牵着一起梦游
+	[03:36.98]
+	[03:37.32]听妈妈的话 别让她受伤
+	[03:47.36]想快快长大 才能保护她
+	[03:57.76]美丽的白发 幸福中发芽
+	[04:08.06]天使的魔法 温暖中慈祥
+	[04:17.38]
+</textarea>
+
+<script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+<script type="text/javascript">
+	
+	$(function(){
+		
+		// 创建一个mp3的播放器
+		var audioDom = document.createElement("audio");
+		// 设置播放器地址
+		audioDom.src = "mp3/1.mp3";
+		// 自动播放
+		//audioDom.autoplay = "autoplay";
+		
+		// 获取textearea中歌词
+		var lrc = $("#lrc").val();
+		
+		// 把时间和歌词分离出来
+		var lrcArray = lrc.split("[");
+		
+		var html = "";
+		for(var i = 0; i < lrcArray.length; i++){
+			// 第二次分割“]”
+			var arr = lrcArray[i].split("]");
+
+			// ["01:05.53", "有你陪伴我同闯天涯↵"]
+
+			// 取到歌词
+			var lrcMsg = arr[1];
+			// 取到时间
+			var timer = arr[0].split(".");
+			// 拿到时间分钟和秒
+			var stime = timer[0].split(":");
+			// 转换成秒数
+			var ms = stime[0]*60 + stime[1]*1;
+
+			if(lrcMsg){
+				html += "<div class='lrcLine' id='"+ms+"'>"+lrcMsg+"</div>";
+				
+			}
+		}
+		// 把解析好的歌词放入div中
+		$(".p_con").html(html);
+
+		audioDom.addEventListener("timeupdate",function(){
+			// 获取当前播放的时间
+			var timer = this.currentTime;
+			// 通过时间来驱动歌词
+			var s = parseInt(timer);
+			for(var i = 0; i < s; i++){
+				$("#"+i).addClass("sel").siblings().removeClass("sel");
+				//$(".p_con .lrcLine").eq(i%20).animate({'margin-top':-50+'px'},5000);
+			}
+		});
+		
+
+		// 点击控制音乐播放
+		$(".p_music").click(function(){
+			if(audioDom.paused){
+				audioDom.play();
+			} else {
+				audioDom.pause();
+			}
+			$(this).toggleClass("rotate");
+		});
+			
+	});
+
+</script>
+
+</body>
+</html>

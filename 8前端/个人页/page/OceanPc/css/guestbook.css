@@ -1,0 +1,16 @@
+
+
+.gnav,.guestbookNav{width:100%;height:146px;background:url("../images/guestbook/bg/bg_02.jpg")no-repeat center;min-width:1000px;}
+.gnav div.big-nav ul li,.guestbookNav div.big-nav ul li{margin: 10px 0px 23px 19px;}
+.gnav ul li.about a span{background-position:-236px 0px;}
+.gnav ul li.island a:hover span{background-position:-117px 0px;}
+.gnav ul li.animal a:hover span{background-position:-56px 0px;}
+.gnav ul li.konws a:hover span{background-position:-180px 0px;}
+.gnav ul li.plant a:hover span{background-position: 4px 0px;}
+
+    
+.banner{width:1000px;height:156px;background:url("../images/guestbook/bg/bg_05.jpg") no-repeat center;}
+
+.content{width:1000px;}
+
+.footer{background:#f6f6f6;font-size:12px;margin-top: 90px;}

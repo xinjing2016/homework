@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>data</title>
+ </head>
+ <body>
+ <div id="aa" style="width:100px;height:100px;background:red;
+  position:absolute;top:0px;left:0px;"></div>
+ </body>
+</html>
+<script>
+var s = new Date();
+//alert(s.getTime());//1970~now 毫秒数
+//alert(s.getFullYear());//year
+
+
+var box = document.getElementById('aa');
+move(box,'left',"200px",2000);
+function move(obj,attr,target,time){
+	var s = new Date();
+	var sVal = parseInt(getStyle(obj,attr));
+	var eVal = parseInt(target);
+	var timer = setInterval(function(){
+		var nowTime = new Date();
+		var prop = (nowTime-s)/time;
+		if (prop>=1)
+		{
+			prop = 1;
+			clearInterval(timer);
+		}
+		obj.style[attr] = prop*(eVal-sVal)+sVal+"px";
+	},13)
+
+}
+function getStyle(obj,attr){
+	return obj.currentStyle?obj.currentStyle[attr]:getComputedStyle(obj)[attr];
+}
+</script>

@@ -1,0 +1,14 @@
+@charset "utf-8";
+/******
+* CSS 平板样式
+*/
+/*导航*/
+.head_nav{ top:0px; left:0px; width:100%; height:100px;}
+.head_nav a.logo{width:100px; height:100px;  margin:8px 50px; float:left; background-size:100px 100px;}
+.head_nav ul li.title{font-size:16px;font-weight:700; }
+.head_nav ul li{line-height:100px; padding:0px 12px; float:left; font-size:12px;}
+/*第二屏*/
+.b_anim .anim_up div.box_2,.b_anim .anim_out div.box_2{ width:60%; font-size:1.2em;  line-height:1.4em; margin-left:0px; padding-top:4em;}
+.anim{transition:left 500ms linear;} /*css3  过度  指left0 -100% 过总共发生的时间 */
+/*第三屏*/
+.anim_text{left:8%;top:28%;width:40%; font-size:1.2em; line-height:1.4em; color:#Fff;}

@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>节点操作</title>
+   <script src="js/jquery.js"></script>
+ </head>
+ <body>
+  <ul>
+	<li>1<input type="button" value="up"/><input type="button" value="du"/></li>
+	<li>2<input type="button" value="up"/><input type="button" value="du"/></li>
+	<li>3<input type="button" value="up"/><input type="button" value="du"/></li>
+	<li>4<input type="button" value="up"/><input type="button" value="du"/></li>
+	<li>5<input type="button" value="up"/><input type="button" value="du"/></li>
+  </ul>
+
+  <script>
+	$(function(){
+		$('input[value=up]').click(function(){
+			//alert(1);
+			var $now = $(this).parent('li');
+			var $pre = $now.prev();
+			if ($pre.length == 0 )
+			{
+				alert(1);
+			}
+			$pre.before($now);
+		});
+		$('input[value=du]').click(function(){
+			//alert(1);
+			var $now = $(this).parent('li');
+			var $next = $now.next();
+			if ($next.length == 0 )
+			{
+				alert(1);
+			}
+			$next.after($now);
+		});
+		
+	})
+  </script>
+ </body>
+</html>

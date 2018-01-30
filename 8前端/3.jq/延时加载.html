@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>延时加载</title>
+  <script src="js/jquery-1.11.1.js"></script>
+  <style>
+	div{border:1px solid red;margin-top:200px;width:760px;height:300px;}
+  </style>
+ </head>
+ <body>
+  
+<div><img _src="images/lunbo/bg1.jpg"/></div>
+<div><img _src="images/lunbo/bg2.jpg"/></div>
+<div><img _src="images/lunbo/bg3.jpg"/></div>
+<div><img _src="images/lunbo/bg4.jpg"/></div>
+<div><img _src="images/lunbo/bg5.jpg"/></div>
+
+<script>
+$(function(){
+
+	
+	toChange();
+	$(window).scroll(toChange);
+	function toChange(){
+		var veiwHeight = $(window).height();
+		var scrollY = $(window).scrollTop();
+
+		$('img').each(function(i,elem){
+			if ($(elem).offset().top < veiwHeight+scrollY)
+			{
+				$(elem).attr('src',$(elem).attr('_src'));
+			}
+		});
+	};
+	
+	$(document).on('click',function(ev){
+		alert(ev.pageY);
+	});
+
+
+
+
+})
+
+
+</script>
+
+ </body>
+</html>

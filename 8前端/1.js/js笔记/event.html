@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>event</title>
+ </head>
+ <body>
+  
+
+
+ </body>
+</html>
+<script>
+	/*
+		event object
+		事件函数才能调用event
+		谁调用this就是谁
+		ie和谷歌里面有event
+		但是火狐始终看不见event
+
+		如果是实践函数this就是对象
+		如果是自己调用的this就是window
+	*/
+
+	document.onclick=function(){
+		aa();
+	}
+	function aa(){alert(this);}
+	
+	var josn = {
+		fn:function(){alert(this);}
+	}
+	josn.fn();//josn object
+
+	/*
+		改this指向
+	*/
+	aa.call(document,3,4);//指向，形参列表
+
+	function aa (a,b){alert(this);}
+	//fn && fn.call(obj);
+
+	//火狐里面的event只能是事件函数的第一个形参
+	document.onclick = function(e){
+	    e = e || window.event;//兼容性
+		for (var key in ev )
+		{
+			console.log(key +':'+ev[key]+'<br>')
+		}
+	}
+</script>

@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+ </head>
+ <body>
+  
+<input id="num" type="text" value="1" />
+
+<input id="ok" type="button" value="确认" />
+
+
+
+
+
+<script src="js/jquery.js"></script>
+<script>
+window.onload=function(){
+var h = 1;
+var t = 1;
+var y = 1;
+var x = 1;
+var n = document.getElementById("num");
+var ok = document.getElementById("ok");
+
+//alert(typeof(num));
+ok.onclick=function (){
+
+
+	var num = parseInt(n.value);
+	h = (num-(num % 64))/64;
+	t = ((num-h*64)-((num-h*64)%16))/16;
+	y = ((num-h*64-t*16)-(num-h*64-t*16)%4)/4;
+	x = num - h*64-t*16-y*4;
+		for (var i = 0;i<h ;i++ )
+	{
+		var li = document.createElement("li");
+		var txt = document.createTextNode("皇冠");
+		li.appendChild(txt);
+		document.body.appendChild(li);
+	}
+
+	for (var i = 0;i<t ;i++ )
+	{
+	var li = document.createElement("li");
+	var txt = document.createTextNode("太阳");
+	li.appendChild(txt);
+	document.body.appendChild(li);
+	}
+	for (var i = 0;i<y ;i++ )
+	{
+	var li = document.createElement("li");
+	var txt = document.createTextNode("月亮");
+	li.appendChild(txt);
+	document.body.appendChild(li);
+	}
+
+	for (var i = 0;i<x ;i++ )
+	{
+	var li = document.createElement("li");
+	var txt = document.createTextNode("星星");
+	li.appendChild(txt);
+	document.body.appendChild(li);
+	}
+
+}
+
+
+
+
+}
+</script>
+
+
+
+
+
+
+
+ </body>
+</html>

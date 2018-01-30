@@ -1,0 +1,140 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>jq轮播图</title>
+  <style type="text/css">
+	.main{width:760px;height:300px;margin:0 auto;overflow:hidden;position:relative2015/12/17;}
+	ul{list-style:none;}
+	#pic li{width:760px;height:300px;position:relative;overflow:hidden;}
+	.img1,.img2{position:absolute;top:0px;}
+	.img1{left:-760px;}
+	.img2{left:-20px;display:none;}
+	.list{position:absolute;bottom: 131px;right: 279px;}
+	.list li{width:20px;height:20px;border:1px solid white;float:left;margin:5px;}
+	.select{background:white;}
+  </style>
+ </head>
+ <body>
+  
+<div class="main">
+		<ul id="pic">
+			<li style="background:url('images/lunbo/bg1.jpg')">
+				<img class="img1" src="images/lunbo/text1.png" />
+				<img class="img2" src="images/lunbo/con1.png" />
+			</li>
+			<li style="background:url('images/lunbo/bg2.jpg')">
+				<img class="img1" src="images/lunbo/text2.png" />
+				<img class="img2" src="images/lunbo/con2.png" />
+			</li>
+			<li style="background:url('images/lunbo/bg3.jpg')">
+				<img class="img1" src="images/lunbo/text3.png" />
+				<img class="img2" src="images/lunbo/con3.png" />
+			</li>
+			<li style="background:url('images/lunbo/bg4.jpg')">
+				<img class="img1" src="images/lunbo/text4.png" />
+				<img class="img2" src="images/lunbo/con4.png" />
+			</li>
+			<li style="background:url('images/lunbo/bg5.jpg')">
+				<img class="img1" src="images/lunbo/text5.png" />
+				<img class="img2" src="images/lunbo/con5.png" />
+			</li>
+				
+		</ul>
+	
+		<ul class="list">
+			<li class="select"></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+</div>
+
+
+<script src="js/jquery.js"></script>
+<script>
+	$(function(){
+
+
+
+
+var index = 0;
+
+myshow();
+
+function change(){
+		myhide();
+		if(index == 4) index = -1;
+		index++;
+		$("#pic li").eq(index).fadeIn(100).siblings().fadeOut(100);
+		$(".list li").eq(index).css("background","white").siblings().css("background","none");
+		myshow();
+}
+
+function myshow()
+{
+	 $("#pic li").eq(index).find(".img1").animate({"left":"0px"},1000,
+		function(){
+		$("#pic li").eq(index).find(".img2").css("display","block");
+		$("#pic li").eq(index).find(".img2").animate({"left":"0px"},1000);});	
+}
+
+function myhide()
+{
+		$("#pic li").eq(index).find(".img1").css("left","-760px");
+		$("#pic li").eq(index).find(".img2").css("display","none");
+		$("#pic li").eq(index).find(".img2").css("left","-20px");	
+}
+
+
+
+
+timer = setInterval(function(){
+		myhide();
+		if(index == 4) index = -1;
+		index++;
+		$("#pic li").eq(index).fadeIn(100).siblings().fadeOut(100);
+		$(".list li").eq(index).css("background","white").siblings().css("background","none");
+		myshow();
+},2500)
+		
+
+$("#pic li").mouseover(function(){clearInterval(timer);});
+
+
+
+$("#pic li").mouseout(function()
+{
+clearInterval(timer);
+timer = setInterval(function (){
+		myhide();
+		if(index == 4) index = -1;
+		index++;
+		$("#pic li").eq(index).fadeIn(100).siblings().fadeOut(100);
+		$(".list li").eq(index).css("background","white").siblings().css("background","none");
+		myshow();
+},2500)		
+});
+
+
+
+
+
+
+
+	})
+	
+
+
+
+
+	
+</script>
+
+ </body>
+</html>

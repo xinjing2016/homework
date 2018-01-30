@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>css3选项卡</title>
+  <style>
+		#wrap{
+			width:640px;
+			margin:100px auto;
+			box-shadow:0 10px 5px rgba(0,0,0,.7);
+			position:relative;
+			padding-top:320px;
+		}
+		#wrap>img{
+			position:absolute;left:0px;top:0px;
+			transition:all 1s;
+		}
+		img{
+			display:block;
+		}
+		input{
+			display:none;
+		}
+		label{
+			border:10px solid #aaa;
+			margin:20px 3px;
+			float:left;
+			opacity:.5;
+			transition:all 1s;
+		}
+
+		input:checked + label{
+			opacity:1;
+			border:10px solid #fff;
+		}
+ 		input ~ img{
+			opacity:0;
+			transform:scale(1.1);
+		}
+		input:checked + label + img{
+			opacity:1;
+			transform:scale(1);
+		}
+  </style>
+ </head>
+ <body>
+  
+<div id="wrap">
+	<input type="radio" name="checked" id="id1" checked />
+	<label for="id1">
+		<img src="img/1.jpg" width="100" />
+	</label>
+	<img src="img/1.jpg" width="640" height="320" />
+
+	<input type="radio" name="checked" id="id2" />
+	<label for="id2">
+		<img src="img/2.jpg" width="100" />
+	</label>
+	<img src="img/2.jpg" width="640" height="320" />
+
+	<input type="radio" name="checked" id="id3"  />
+	<label for="id3">
+		<img src="img/3.jpg" width="100" />
+	</label>
+	<img src="img/3.jpg" width="640" height="320" />
+
+	<input type="radio" name="checked" id="id4"  />
+	<label for="id4">
+		<img src="img/4.jpg" width="100" />
+	</label>
+	<img src="img/4.jpg" width="640" height="320" />
+
+	<input type="radio" name="checked" id="id5"  />
+	<label for="id5">
+		<img src="img/5.jpg" width="100" />
+	</label>
+	<img src="img/5.jpg" width="640" height="320" />
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ </body>
+</html>

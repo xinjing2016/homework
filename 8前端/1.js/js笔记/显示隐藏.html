@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+
+ <style>
+	#a{width:100px;height:100px;background:red;}
+	#aa{width:200px;height:200px;background:blue;display:none;}
+	.a:hover .aa{display:none;}
+ </style>
+
+
+
+
+ </head>
+ <body>
+  
+<div id="a"></div>
+<div id="aa"></div>
+
+
+ </body>
+
+<script>
+
+var div1 = document.getElementById("a");
+var div2 = document.getElementById("aa");
+var flag=1;
+div1.onmouseover=function(){
+
+	if(flag)
+	{
+	div2.style.display="block";
+	flag=0;
+	}
+	else{
+	div2.style.display="none";
+	flag=1;
+	}
+	};
+
+
+div1.onmouseout=function(){
+	if(flag)
+	{
+	div2.style.display="block";
+	flag=0;
+	}
+	else{
+	div2.style.display="none";
+	flag=1;
+	}
+
+	};
+
+
+
+</script>
+
+
+
+</html>

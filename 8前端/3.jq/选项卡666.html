@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>选项卡666</title>
+  <script src="js/jquery.js"></script>
+  <style>
+	.tab li{float:left;width:50px;height:30px;border:1px solid;}
+	.con li{width:200px;height:200px;border:1px solid;position:absolute;top:60px;}
+	ul,li{list-style:none;}
+	.active{background:red}
+  </style>
+ </head>
+ <body>
+  <div>
+	<ul class="tab">
+		<li><span>1</span></li>
+		<li><span>2</span></li>
+		<li><span>3</span></li>
+	</ul>
+	<ul class="con">
+		<li>111</li>
+		<li>222</li>
+		<li>333</li>
+	</ul>
+  </div>
+
+  <script>
+  $(function(){
+	var $tab = $('.tab').find('li');
+	var $con = $('.con').find('li');
+	
+	//初始化
+	$tab.first().addClass('active');
+	$con.first().show().siblings().hide();
+
+	//点击事件
+	$tab.mouseover(function(){
+
+		$(this).addClass('active').siblings().removeClass('active');
+		$con.eq($(this).index()).show().siblings().hide();
+	})
+  })
+  </script>
+ </body>
+</html>
